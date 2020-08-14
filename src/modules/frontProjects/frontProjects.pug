@@ -1,0 +1,45 @@
+.frontProjects
+  .c
+    .frontProjects__title.h1 Проекты
+    .frontProjects__filters
+      label.checkbox
+        input(type='radio' name='filter' checked)
+        span все проекты
+      label.checkbox
+        input(type='radio' name='filter')
+        span дома из клееного бруса
+      label.checkbox
+        input(type='radio' name='filter')
+        span каркасно-брусовые дома
+      label.checkbox
+        input(type='radio' name='filter')
+        span комбинированные дома
+      label.checkbox
+        input(type='radio' name='filter')
+        span бани
+      label.checkbox
+        input(type='radio' name='filter')
+        span проектирование
+
+  .frontProjects__items
+    .frontProjects__item
+      +card('images/1_15.jpg')
+
+    .frontProjects__item
+      +card('images/1_17.jpg')
+      
+    .frontProjects__item
+      +card('images/2_30.jpg')
+
+    .frontProjects__item
+      +card('images/1_18.jpg')
+
+  .frontProjects__link: a.btn(href='#') ВСЕ ПРОЕКТЫ
+
+  .frontProjects__message
+    .c
+      .frontProjects__form
+        .frontProjects__form-title Есть свой проект? Или увидели интересный вариант на другом сайте?
+        .frontProjects__form-text Рассчитаем смету и предложим выгодную цену.
+        .frontProjects__form-note Проект можно прикрепить в любом виде: чертеж, рисунок, эскиз, картинка, ссылка на сайт.
+        .frontProjects__form-button: a.btn(href='#') ОТПРАВИТЬ ПРОЕКТ

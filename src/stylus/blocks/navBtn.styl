@@ -1,0 +1,36 @@
+.navBtn
+  display: block;
+  width: 70px
+  height: 70px
+  background: $grey2
+  margin: 0 1px
+  position: relative;
+  border: 0
+  anim()
+  +media('lg')
+    width: 40px
+    height: 40px
+
+  svg
+    position: absolute;
+    fill: $brown2
+    width: 14px
+    height: 14px
+    top: 50%
+    left: 50%
+    transform translate(-50%, -50%)
+    anim()
+    +media('lg')
+      width: 8px
+      height: 8px
+
+
+  &:hover
+    background: $brown1
+
+    svg
+      fill $white
+
+  &--next
+    svg
+      transform translate(-50%, -50%) rotate(180deg)

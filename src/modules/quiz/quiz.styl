@@ -1,0 +1,222 @@
+.quiz
+  padding: 22px 0 42px
+  +media('md')
+    padding: 18px 0 42px
+
+  &__title
+    text-align: center;
+    font-size: 36px
+    letter-spacing 0
+    font-weight: bold;
+    margin-bottom: 23px
+    +media('md')
+      font-size: 22px
+      line-height: 1.3
+      margin-bottom: 19px
+
+  &__items
+    display: flex;
+    margin: 0 -15px
+    +media('lg')
+      flex-direction column
+      justify-content center
+      margin: 0
+
+  &__item
+    width: 33.3333%
+    padding: 0 15px
+    position: relative;
+    +media('lg')
+      padding: 0
+      width: 100%
+      margin-bottom: 25px
+
+  &__card
+    margin: 0 auto
+    background-position: 50% 100%;
+    background-size: cover;
+    color: $white
+    height: 100%
+    display: flex;
+    flex-direction column
+    justify-content flex-end
+    padding: 32px 39px
+    position: relative;
+    overflow: hidden;
+    min-height: 420px
+    max-width 370px
+    +media('lg')
+      min-height 318px
+      padding: 24px 29px
+
+    &:hover
+      & ^[0]__text
+        opacity: 1
+        transform none
+
+  &__header
+    font-size: 25px
+    line-height: 1.32
+    font-weight: 400
+    +media('md')
+      font-size: 20px
+      line-height: 1.4
+
+    span
+      color: $brown1
+
+  &__text
+    margin-bottom: 26px
+    opacity: 0
+    transform translateY(-20px)
+    anim(.2s)
+    +media('md')
+      margin-bottom: 15px
+
+  &__label
+    position: absolute;
+    font-size: 12px
+    font-weight: 800
+    letter-spacing .2em
+    padding: 11px 0 12px
+    width: 300px
+    transform rotate(45deg)
+    text-align: center;
+    background: $brown1
+    top: 33px;
+    right: -95px;
+    +media('lg')
+      font-size: 9px
+      padding: 9px 0 10px;
+      top: 24px;
+      right: -105px;
+
+  &__lock
+    top: 20px
+    right: 20px
+    position: absolute;
+    width: 40px
+    height: 40px
+    background: rgba($black, .75)
+    text-align: center;
+    line-height: 40px
+
+    svg
+      vertical-align: middle;
+      margin-bottom: 8px
+      width: 21px
+      height: 21px
+      fill $white
+
+  &__plus
+    position: absolute;
+    width: 60px
+    height: 60px
+    background: $brown2
+    bottom: 40px
+    left: 100%
+    margin-left: -30px
+    z-index: 1
+    +media('lg')
+      width: 45px
+      height: 45px
+      left: 50%
+      margin-left: -22px
+      bottom: 0
+      margin-bottom: -35px
+
+    svg
+      position: absolute;
+      width: 20px
+      height: 20px
+      fill $brown1
+      top: 50%
+      left: 50%
+      margin-top: -10px
+      margin-left: -10px
+
+  &__present
+    position: relative;
+    background: $brown1
+    max-width 770px
+    margin: 40px auto 0
+    text-align: center;
+    padding: 34px 40px 40px
+    overflow: hidden;
+    +media('md')
+      margin: 0
+      padding: 22px 20px 61px
+
+    &:before, &:after
+      content ''
+      position: absolute;
+      background: url(../../images/wood-bg.png)
+      width: 539px
+      height: 535px
+      transform rotate(90deg)
+      opacity: .1
+      pointer-events none
+
+    & > *
+      position: relative;
+      z-index: 1
+
+    &:before
+      top: -93px;
+      left: -387px;
+      +media('md')
+        left: 50%
+        margin-left: -260px;
+        top: -400px;
+
+    &:after
+      top: -286px;
+      right: -241px;
+      +media('md')
+        display: none;
+
+    &-text
+      color: $white
+      font-size: 18px
+      line-height: 1.3
+      letter-spacing 0
+      font-weight: 600
+      margin-bottom: 20px
+      +media('md')
+        font-size: 13px
+        margin-bottom: 12px
+
+  &__image
+    position: absolute;
+
+    &--1
+      bottom: -14px;
+      left: 6px;
+      transform: rotate(12deg) scale(0.9);
+      +media('md')
+        bottom: -50px;
+        left: 50%
+        margin-left: -151px
+        transform: rotate(12deg) scale(0.4);
+
+    &--2
+      top: -46px;
+      left: 3px;
+      transform: rotate(162deg) scale(0.6);
+      +media('md')
+        top: auto;
+        bottom: -49px;
+        left: 50%
+        margin-left: -65px
+        transform: rotate(-12deg) scale(0.6);
+
+    &--3
+      top: 51px;
+      right: -17px;
+      transform: rotate(-35deg);
+      +media('md')
+        top: auto;
+        bottom: -55px;
+        left: 50%;
+        margin-left: 33px;
+        transform: rotate(22deg) scale(0.6);

@@ -1,0 +1,81 @@
+.input
+  position: relative;
+  display: block;
+
+  &--sm
+    & ^[0]__input
+      padding: 18px 22px 19px
+      font-size: 10px
+      letter-spacing .3em
+      +media('md')
+        padding: 16px 18px 16px
+        font-size: 8px
+
+    & ^[0]__note
+      font-size: 10px
+
+  &__input
+    position: relative;
+    z-index: 1
+    display: block
+    width: 100%
+    background: #fff
+    padding: 21px 31px 25px
+    //font-size: 10px
+    //letter-spacing .3em
+    font-size: 18px
+    font-weight: 500
+    border: 2px solid #f6f3f1
+    anim()
+    +media('md')
+      font-size: 16px
+      padding: 14px 22px 13px
+
+    &:hover
+      border-color: #d0c1ba
+
+    &:focus
+      border-color: #8a6552
+
+    &.wpcf7-not-valid
+      border-color: #c83b3b
+
+  &__label
+    display: inline-block;
+    font-size: 10px
+    letter-spacing .3em
+    font-weight: 500
+    color: $black
+    margin-bottom: 10px
+    +media('md')
+      font-size: 8px
+      margin-bottom: 6px
+
+  &__note
+    position: absolute;
+    //font-size: 10px
+    font-size: 18px
+    letter-spacing .3em
+    font-weight: 500
+    color: $brown1
+    z-index: 1
+    right: 23px;
+    top: 20px;
+    anim()
+
+    ^[0]__label ~ &
+      top: 57px
+      +media('md')
+        top: 47px
+
+    +media('md')
+      font-size: 8px
+      top: 18px
+
+  &--textarea
+    resize: none
+    min-width 100%
+    max-width 100%
+    line-height: 1.2
+
+

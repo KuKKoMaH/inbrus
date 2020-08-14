@@ -1,0 +1,24 @@
+.service
+  padding: 61px 0 70px
+  +media('md')
+    padding: 32px 0 30px
+
+  &__container
+    display: flex;
+    +media('lg')
+      flex-direction column
+
+  &__content
+    flex: 1
+    min-width: 0;
+    margin-top: 2px
+
+  &__aside
+    width: 300px
+    //margin-left: 28px
+    margin-left: 70px
+    flex-shrink 0
+    +media('lg')
+      width: 100%
+      margin: 28px 0px 0
+

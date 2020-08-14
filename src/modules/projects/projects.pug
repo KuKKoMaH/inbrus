@@ -1,0 +1,139 @@
+.projects
+  .projects__open
+    button.projects__btn ПОКАЗАТЬ ФИЛЬТРЫ
+
+  .projects__filters
+    .projects__close
+      button.projects__btn СКРЫТЬ ФИЛЬТРЫ
+
+    .projects__filter
+      .projects__header Технология:
+      .projects__checkboxes
+        .projects__checkbox: label.checkbox
+          input(type='checkbox')
+          span клееный брус
+        .projects__checkbox: label.checkbox
+          input(type='checkbox')
+          span камерная сушка
+        .projects__checkbox: label.checkbox
+          input(type='checkbox')
+          span каркасный дом
+        .projects__checkbox: label.checkbox
+          input(type='checkbox')
+          span комбинированный дом
+        .projects__checkbox: label.checkbox
+          input(type='checkbox')
+          span фахверк
+
+    .projects__filter
+      .projects__header Цена, тыс. руб.
+      .projects__slider
+        .slider(data-from=899 data-to=4999)
+          .slider__ui
+          .slider__input.slider__input--from
+            .slider__label ОТ
+            .input: input.input__input
+          .slider__input.slider__input--to
+            .slider__label ДО
+            .input: input.input__input
+
+    .projects__filter
+      .projects__header Этажность
+      .projects__toggles
+        label.projects__toggle
+          input(type='checkbox')
+          span 1
+        label.projects__toggle
+          input(type='checkbox')
+          span 2
+        label.projects__toggle
+          input(type='checkbox')
+          span 3
+        label.projects__toggle
+          input(type='checkbox')
+          span 4
+        label.projects__toggle
+          input(type='checkbox')
+          span 5
+
+    .projects__filter
+      .projects__header площадь м#[sup 2]
+      .projects__slider
+        .slider(data-from=899 data-to=4999)
+          .slider__ui
+          .slider__input.slider__input--from
+            .slider__label ОТ
+            .input: input.input__input
+          .slider__input.slider__input--to
+            .slider__label ДО
+            .input: input.input__input
+
+    hr
+
+    .projects__header Дополнительные помещения
+
+    .projects__subfilter
+      .projects__subheader спальных комнат
+      .projects__toggles
+        label.projects__toggle
+          input(type='checkbox')
+          span 1
+        label.projects__toggle
+          input(type='checkbox')
+          span 2
+        label.projects__toggle
+          input(type='checkbox')
+          span 3
+        label.projects__toggle
+          input(type='checkbox')
+          span 4
+        label.projects__toggle
+          input(type='checkbox')
+          span 5
+
+    .projects__subfilter
+      .projects__subheader Санузел
+      .projects__toggles
+        label.projects__toggle
+          input(type='checkbox')
+          span 1
+        label.projects__toggle
+          input(type='checkbox')
+          span 2
+        label.projects__toggle
+          input(type='checkbox')
+          span 3
+
+    .projects__subfilter
+      .projects__cols
+        .projects__col
+          .projects__checkbox: label.checkbox
+            input(type='checkbox')
+            span терасса
+          .projects__checkbox: label.checkbox
+            input(type='checkbox')
+            span гардеробная#[br](кладовая)
+        .projects__col
+          .projects__checkbox: label.checkbox
+            input(type='checkbox')
+            span балкон
+          .projects__checkbox: label.checkbox
+            input(type='checkbox')
+            span баня
+          .projects__checkbox: label.checkbox
+            input(type='checkbox')
+            span бассейн
+
+  .projects__primary
+    .projects__items
+      .projects__item
+        +card('images/1_15.jpg')
+      .projects__item
+        +card('images/1_17.jpg')
+      .projects__item
+        +card('images/1_21.jpg')
+      .projects__item
+        +card('images/1_18.jpg')
+    .projects__more
+      a.btn(href='#') ЗАГРУЗИТЬ ЕЩЕ
+

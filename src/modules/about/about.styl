@@ -1,0 +1,71 @@
+.about
+  padding: 111px 0 40px
+  +media('md')
+    padding: 53px 0 25px
+
+    .tabs__header
+      width: 100%
+      text-align: center;
+
+  &__row
+    display: flex;
+    +media('lg')
+      flex-direction column
+      align-items center
+
+  &__main
+    padding-right: 130px
+    flex: 1
+    +media('lg')
+      padding-right: 0
+      margin-bottom: 48px
+      width: 100%
+
+  &__aside
+    flex-shrink 0
+    width: 370px
+    +media('lg')
+      width: 100%
+
+  &__header
+    margin-bottom: 48px
+    +media('md')
+      text-align: center;
+      margin-bottom: 25px
+
+    &--aside
+      display: flex;
+      align-items center
+      justify-content space-between
+      margin-bottom: 28px
+      +media('md')
+        margin-bottom: 26px
+
+  &__more
+    text-align: right;
+    //display: none;
+    margin-top: 16px
+    +media('md')
+      text-align: center;
+      margin-top: 19px
+
+    //&--active
+    //  display: block;
+
+  //&__text
+    //max-height 248px // 24.75(line-height) * 10
+    //overflow: hidden;
+    //display: block;
+
+    //anim(.2s)
+
+    //&--full
+    //  max-height: auto !important;
+
+//&__inner
+//  overflow: hidden;
+//  display: block;
+//  display: -webkit-box;
+//  max-height: calc(10em * 1.65)
+//  -webkit-line-clamp: 10;
+//  -webkit-box-orient: vertical;

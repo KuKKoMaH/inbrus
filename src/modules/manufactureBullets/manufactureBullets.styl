@@ -1,0 +1,56 @@
+.manufactureBullets
+  margin: 105px 0
+  +media('md')
+    margin: 60px 0 19px
+
+  &__items
+    display: flex;
+    margin: 0 -15px
+    justify-content center
+    +media('lg')
+      flex-wrap wrap
+    +media('md')
+      margin: 0
+      text-align: center;
+
+  &__item
+    width: 25%
+    padding: 15px
+    +media('lg')
+      width: 50%
+    +media('md')
+      width: 100%
+      padding: 0
+      margin-bottom: 33px
+
+  &__icon
+    margin-bottom: 29px
+    +media('md')
+      margin-bottom: 14px
+
+    svg
+      display: block;
+      width: 45px
+      height: 40px
+      fill $brown2
+      +media('md')
+        margin: 0 auto
+
+  &__title
+    font-size: 18px
+    line-height: 1.4;
+    font-weight: 600
+    color: $brown1
+    max-width 250px
+    margin-bottom: 22px
+    +media('md')
+      font-size: 16px
+      max-width 100%
+      margin-bottom: 10px
+
+  &__text
+    max-width 250px
+    +media('md')
+      max-width 100%
+
+

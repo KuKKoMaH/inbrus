@@ -1,0 +1,64 @@
+.aboutInfo
+  background: $grey2
+  padding: 63px 0 25px
+  +media('md')
+    padding: 33px 0 30px
+
+  &__content
+    display: flex;
+    align-items flex-start
+    +media('lg')
+      flex-direction column
+
+  &__gallery
+    padding-top: 7px
+    width: 300px
+    flex-shrink 0
+    margin-right: 70px
+    +media('lg')
+      width: 100%
+      margin: 0 0 34px
+
+    & .gallery__nav
+      bottom: 0
+      right: 50%
+      transform translateX(50%)
+
+  &__bullets
+    padding-top: 7px
+    width: 300px
+    flex-shrink 0
+    margin-left: 70px
+    +media('lg')
+      width: 100%
+      margin: 0
+      padding: 0
+
+  &__bullet
+    overflow: hidden;
+    background: $brown1 url(../../images/wood-bg-white.png) 0 0 no-repeat;
+    margin-bottom: 8px
+    color: $white
+    padding: 22px 30px
+    +media('md')
+      padding: 16px 30px 13px
+      margin-bottom: 10px
+
+    &--01
+      background-position: -142px -158px
+
+    &--02
+      background-position: -90px -410px
+
+    &--03
+      background-position: -110px -240px
+
+    &-title
+      font-size: 27px
+      line-height: 1.25
+      font-weight: bold;
+      +media('md')
+        font-size: 16px
+
+    &-text
+      opacity: .75

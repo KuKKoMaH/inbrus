@@ -1,0 +1,53 @@
+.form
+  width: 100%
+  max-width 570px
+  margin: 0 auto
+  +media('md')
+    padding: 0 20px
+
+  h2
+    text-align: center;
+    font-size: 36px
+    margin-bottom: 16px
+    +media('md')
+      font-size: 22px
+
+    &:after
+      content: ''
+      display: block;
+      width: 100px
+      height: 2px
+      background: #e33535
+      margin: 11px auto 0
+      +media('md')
+        width: 60px
+        height: 1px
+
+  &__text
+    text-align: center;
+
+  &__inputs
+    margin-top: 62px
+
+  &__input
+    margin-bottom: 35px
+    +media('md')
+      margin-bottom: 30px
+
+  &__footer
+    display: flex;
+    align-items center
+    +media('md')
+      flex-direction column-reverse
+
+  &__info
+    font-size: 11px
+    +media('md')
+      margin-top: 25px
+      font-size: 10px;
+      text-align: center;
+
+  &__button
+    margin-left: auto;
+    +media('md')
+      margin-right: auto;

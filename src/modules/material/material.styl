@@ -1,0 +1,61 @@
+.material
+  padding: 108px 0 47px
+  background: $grey2
+  +media('md')
+    padding: 51px 0 21px
+    text-align: center;
+
+  &__title
+    margin-bottom: 58px
+    +media('md')
+      margin-bottom: 32px
+
+  &__items
+    display: flex;
+    flex-wrap wrap
+    margin: 0 -15px
+    +media('md')
+      margin: 0
+
+  &__item
+    width: 33.3333%
+    padding: 0 15px
+    margin-bottom: 66px
+    +media('lg')
+      width: 50%
+    +media('md')
+      width: 100%
+      padding: 0
+      margin-bottom: 32px
+
+  &__icon
+    margin-bottom: 25px
+    +media('md')
+      margin-bottom: 15px
+
+    svg
+      display: block;
+      width: 50px
+      height: 50px
+      fill $brown1
+      +media('md')
+        margin: 0 auto
+        width: 40px
+        height: 40px
+
+  &__header
+    font-size: 18px
+    line-height: 1.4
+    font-weight: 600
+    margin-bottom: 17px
+    max-width 270px
+    +media('md')
+      font-size: 16px
+      line-height: 1.5
+      max-width 100%
+      margin-bottom: 8px
+
+  &__text
+    max-width 270px
+    +media('md')
+      max-width 100%

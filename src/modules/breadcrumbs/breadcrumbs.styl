@@ -1,0 +1,35 @@
+.breadcrumbs
+  padding: 15px 0 18px
+  background: #8a6552 url(../../images/wood-texture-brown.jpg)
+  color: $white
+
+  &--title
+    padding: 45px 0
+    +media('md')
+      padding: 22px 0
+
+  &__items
+    line-height: 1.5
+    span, a
+      color: $white
+      font-size: 10px
+      font-weight: 500
+      text-transform: uppercase
+      letter-spacing .3em
+      border: 0
+
+    a:hover
+      color: $brown1
+
+    svg
+      transform rotate(180deg)
+      fill: $white
+      width: 9px
+      height: 9px
+      margin: 0 4px
+
+  &__title
+    margin-top: 7px
+    line-height 1.25
+    +media('md')
+      margin: 3px 0

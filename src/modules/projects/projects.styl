@@ -1,0 +1,206 @@
+.projects
+  padding: 0 0 70px
+  display: flex;
+  align-items flex-start
+  +media('lg')
+    padding-bottom: 50px
+    flex-direction column
+
+  &__open
+    width: 100%
+    display: none;
+    text-align: center;
+    padding: 20px
+    +media('lg')
+      display: block;
+
+  &__close
+    display: none;
+    text-align: center;
+    margin-bottom: 20px
+    +media('lg')
+      display: block;
+
+  &__more
+    text-align: center;
+    padding-top: 70px
+    width: 100%
+    +media('lg')
+      padding-top: 50px
+
+  &__btn
+    border: 2px solid $brown2
+    font-size: 10px
+    font-weight: 500
+    letter-spacing .3em
+    padding: 9px 0 9px
+    display: block;
+    width: 100%
+    anim()
+
+    &:hover
+      border-color: $brown1
+
+    &:active
+      color: $white
+      border-color: $brown1
+      background: $brown1
+
+  &__filters
+    width: 33.333%
+    max-width 500px
+    flex-shrink 0
+    padding: 62px 70px
+    +media('lg')
+      position: fixed;
+      top: 0
+      left: 0
+      height: 100%
+      width: 300px
+      background: $white
+      z-index: 10
+      box-shadow 19px 0 68px rgba($black, .35)
+      padding: 20px 21px
+      overflow: auto;
+      opacity: 0
+      transform translateX(-100%)
+      pointer-events none
+      anim(.15s)
+
+      &--active
+        opacity: 1
+        transform none
+        pointer-events all
+
+  &__primary
+    flex: 1
+    +media('lg')
+      width: 100%
+
+  &__items
+    display: flex;
+    flex-wrap wrap
+
+  &__item
+    width: 50%
+    padding: 1px
+    +media('md')
+      width: 100%
+      padding: 0
+
+  &__filter
+    margin-bottom: 59px
+    +media('lg')
+      margin-bottom: 33px
+
+  &__subfilter
+    margin-top: 42px
+    +media('lg')
+      margin-top: 33px
+
+  &__header
+    font-weight: 600
+    //margin-bottom: 18px
+    text-transform: uppercase;
+
+  //+media('lg')
+  //  margin-bottom: 9px
+
+  &__subheader
+    position: relative;
+    font-size: 12px
+    letter-spacing .3em
+    font-weight: 500
+    margin-bottom: 14px
+    text-transform: uppercase;
+    +media('lg')
+      font-size: 8px
+
+    &:before
+      content: ''
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 12px
+      width: 17px
+      height: 17px
+      border: 2px solid $brown2
+
+    &:after
+      content ''
+      position: absolute;
+      width: 7px
+      height: 7px
+      background: $brown2
+      top: 7px;
+      left: 5px;
+      +media('lg')
+        top: 5px
+
+  &__checkboxes
+    margin-top: 18px
+    +media('lg')
+      margin-top: 9px
+
+  &__checkbox
+    margin-bottom: 7px
+    +media('lg')
+      margin-bottom: 5px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__slider
+    margin-top: 20px
+    +media('lg')
+      margin-top: 13px
+
+  &__toggles
+    display: flex;
+    flex-wrap wrap
+    margin: 18px -5px 0
+    +media('lg')
+      margin-top: 4px
+      margin-bottom: 47px
+
+  &__toggle
+    margin: 5px
+
+    input
+      display: none
+
+    span
+      display: block;
+      width: 58px
+      height: 58px
+      border: 2px solid #f6f3f1
+      line-height: 54px
+      font-weight: 500
+      text-align: center;
+      anim()
+      +media('lg')
+        width: 40px
+        height: 40px
+        font-size: 15px
+        line-height: 36px
+
+      &:hover
+        border-color: #e2d8d4
+
+    input:checked ~ span
+      border-color: #8a6552
+
+  &__cols
+    display: flex;
+    flex-wrap wrap
+
+  //+media('lg')
+  //  flex-direction column
+
+  &__col
+    min-width: 50%
+
+  hr
+    border-color: #e8e7e6
+    margin: 70px 0 62px
+    +media('lg')
+      margin: 40px 0 34px;

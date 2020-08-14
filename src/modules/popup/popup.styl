@@ -1,0 +1,167 @@
+.modal
+  display: none;
+
+  &.is-open
+    display: block;
+
+  &[aria-hidden="false"]
+    & ^[0]__overlay
+      animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+
+    & ^[0]__content, & ^[0]__video
+      animation: mmslideIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+
+  &__overlay
+    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+
+  &__content, &__video
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+
+  &__overlay, &__container, &__video
+    will-change: transform;
+
+  &__overlay
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#21120a, .95)
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline 0
+    overflow: auto;
+    //align-items: flex-start;
+    z-index: 100
+    padding: 70px 20px 20px
+
+  &__container
+    margin: auto;
+    max-width 100%
+
+  &__content
+    background-color: #fff;
+    padding: 52px 60px 60px
+    max-width: 490px;
+    //max-height: 100vh;
+    position: relative;
+    +media('md')
+      padding: 33px 30px 40px
+
+    &--politic
+      max-width 800px
+
+  &__video
+    max-width 100%
+    width: 780px
+    position: relative;
+    background: $black
+
+    &:before
+      content: ''
+      display: block;
+      padding-top: 56.25%;
+
+    iframe
+      position: absolute;
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      border: 0
+
+  &__close
+    position: absolute;
+    right: 0
+    bottom: 100%
+    width: 50px
+    height: 50px
+    background: #f8f6f5
+    text-align: center;
+    +media('md')
+      right: 50%
+      margin-right: -25px
+
+    &:hover
+      svg
+        opacity: 1;
+
+    &:active
+      svg
+        fill: $brown2
+
+    svg
+      width: 16px
+      height: 16px
+      fill: $brown1
+      opacity: .25
+      pointer-events none
+      anim()
+
+  &__title
+    margin-bottom: 12px
+    letter-spacing 0.025em
+    +media('md')
+      margin-bottom: 9px
+
+  &__button
+    text-align: center;
+    margin-top: 37px
+    +media('md')
+      margin-top: 30px
+
+  &__form
+    margin-top: 43px
+    +media('md')
+      margin-top: 25px
+
+    .input
+      margin-bottom: 25px
+      +media('md')
+        margin-bottom: 17px
+
+  &__note
+    font-size: 12px
+    text-align: center;
+    margin-top: 30px
+    +media('md')
+      font-size: 10px
+      margin-top: 24px
+
+
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes mmslideIn {
+  from {
+    transform: translateY(40px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mmslideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-40px);
+  }
+}

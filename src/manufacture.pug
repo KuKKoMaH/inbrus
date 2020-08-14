@@ -1,0 +1,11 @@
+extends pug/_layout
+
+block body
+  +breadcrumbs(['ГЛАВНАЯ', 'Производство'])
+  include modules/manufactureWelcome/manufactureWelcome
+  include modules/manufactureBullets/manufactureBullets
+  include modules/manufactureSteps/manufactureSteps
+  include modules/manufactureVideo/manufactureVideo
+  include modules/manufactureVisit/manufactureVisit
+  include modules/press/press
+

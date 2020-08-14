@@ -1,0 +1,26 @@
+.quiz
+  .c
+    .quiz__title Ответив на 5 вопросов, вы получите:
+    .quiz__items
+      .quiz__item
+        .quiz__card(style='background-image: url(modules/quiz/img/bg_01.jpg)')
+          .quiz__label ХИТ ПРОДАЖ
+          .quiz__text В него входит эскиз + план фундамента, все разрезы, все узлы кровли (перекрытия), раскладка стропил, план кровли, рабочая документация по которой строиться дом.
+          .quiz__header #[span Готовый проект]#[br]типового #[span дома]
+        .quiz__plus: +svg('plus')
+      .quiz__item
+        .quiz__card(style='background-image: url(modules/quiz/img/bg_02.jpg)')
+          .quiz__text В нем мы покажем как можно сэкономить до 20 % на строительстве дома, не потеряв при этом в качестве.
+          .quiz__header #[span Видео]#[br]«О подводных камнях в смете»
+        .quiz__plus: +svg('plus')
+      .quiz__item
+        .quiz__card(style='background-image: url(modules/quiz/img/bg_03.jpg)')
+          .quiz__lock: +svg('password')
+          .quiz__header Бонус:#[br]#[span СЕКРЕТНЫЙ ПОДАРОК] стоимостью#[br]до 150 тыс руб
+
+    .quiz__present
+      img.quiz__image.quiz__image--1(src='modules/quiz/img/present.png')
+      img.quiz__image.quiz__image--2(src='modules/quiz/img/present.png')
+      img.quiz__image.quiz__image--3(src='modules/quiz/img/present.png')
+      .quiz__present-text ОТВЕТЬТЕ НА 5 ВОПРОСОВ И ПОЛУЧИТЕ ПОДАРКИ
+      a.btn.btn--type3(href='#') ПОЛУЧИТЬ ПОДАРКИ

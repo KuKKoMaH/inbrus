@@ -1,0 +1,77 @@
+.calc
+  .c
+    h2.calc__title Расчет стоимости дома
+
+    .calc__row
+      .calc__input
+        .input
+          label.input__label ПЛОЩАДЬ ДОМА
+          input.input__input
+          .input__note м#[sup 2]
+      .calc__input
+        .input
+          label.input__label КОЛИЧЕСТВО ЭТАЖЕЙ
+          select.select
+            option 1
+            option 2
+            option 3
+
+    .calc__row
+      .calc__input
+        .input
+          label.input__label ТЕХНОЛОГИЯ
+          select.select
+            option Клееный брус
+            option Клееный брус 2
+            option Клееный брус 3
+      .calc__input
+        .input
+          label.input__label ТОЛЩИНА СТЕН
+          select.select
+            option 160 мм
+            option 180 мм
+            option 200 мм
+      .calc__input
+        .calc__note *рекомендуем для летнего дома толшну до 160 мм, для постоянного проживания от 202 мм
+
+    .calc__row
+      .calc__input
+        .input
+          label.input__label КРОВЛЯ
+          select.select
+            option Гибкая черепица
+            option Гибкая черепица 2
+            option Гибкая черепица 3
+      .calc__input
+        .input
+          label.input__label ФУНДАМЕНТ
+          select.select
+            option Монолитная плита
+            option Монолитная плита 2
+            option Монолитная плита 3
+
+    .calc__row
+      .calc__input.calc__input--wide
+        .calc__file-head Есть свой проект? Или увидели интересный вариант на другом сайте?
+        .calc__file-label Рассчитаем смету и предложим выгодную цену. Проект можно прикрепить в любом виде: чертеж, рисунок, эксиз, картинка
+      .calc__input
+        .file
+          input(type='file')
+          span.link.file__name Прикрепите файл
+
+    hr
+
+    .calc__row
+      .calc__input
+        .input
+          label.input__label ВАШЕ ИМЯ
+          input.input__input
+
+      .calc__input
+        .input
+          label.input__label ВАШ ТЕЛЕФОН
+          input.input__input
+      .calc__input
+        .calc__btn
+          button.btn РАССЧИТАТЬ
+          .calc__info Отправляя форму вы даете согласие на обработку персональных данных и согласны с политикой конфидициальности

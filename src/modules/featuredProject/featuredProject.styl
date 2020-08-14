@@ -1,0 +1,124 @@
+.featuredProject
+  padding: 87px 0 53px
+  +media('md')
+    padding: 31px 0 19px
+
+  &__content
+    display: flex;
+    margin-bottom: 65px
+    +media('lg')
+      flex-direction column
+      margin-bottom: 23px
+
+  &__main
+    flex: 1
+    min-width 0
+
+  &__aside
+    width: 270px
+    flex-shrink 0
+    margin-left: 70px
+    padding-top: 13px
+    +media('lg')
+      margin-left: 0
+      width: 100%
+    +media('md')
+      padding-top: 38px
+
+  &__title
+    +media('md')
+      text-align: center;
+
+  &__subtitle
+    color: $brown2
+    letter-spacing .2em
+    margin-top: 12px
+    +media('md')
+      text-align: center;
+      font-size: 10px
+      margin-top: 7px
+
+  &__gallery
+    margin-top: 63px
+    position: relative;
+    +media('md')
+      margin-top: 35px
+
+    //& .gallery__nav
+    //  +media('md')
+    //    position: static;
+    //    & .navBtn
+    //      position: absolute;
+    //      top: 50%
+    //      margin-top: -15px
+    //    & .navBtn--prev
+    //      left: 9px
+    //    & .navBtn--next
+    //      right: 9px
+
+
+  &__cards
+    margin-bottom: 65px
+    +media('md')
+      margin-bottom: 36px
+
+  &__card
+    background: $brown2
+    margin-bottom: 10px
+    padding: 23px 30px
+    color: $white
+    +media('md')
+      padding: 24px 30px
+
+    &-text
+      opacity: .75
+
+    &-big
+      font-size: 27px
+      font-weight: bold;
+      line-height: 1.3
+      margin-top: 1px
+      +media('md')
+        font-size: 22px
+
+  &__steps
+    margin-top: 31px
+    display: flex;
+    flex-wrap wrap
+    +media('md')
+      margin-top: 34px
+
+  &__step
+    width: 500px
+    padding-right: 130px
+    margin-bottom: 50px
+    +media('md')
+      padding-right: 0
+      width: auto;
+      margin-bottom: 24px
+
+    &--wide
+      width: 670px
+      padding-right: 50px
+      +media('md')
+        width: auto;
+        padding-right: 0
+
+    &:before
+      content: ''
+      display: block;
+      border: 5px solid $brown2
+      width: 17px
+      height: 17px
+      margin-bottom: 28px
+      +media('md')
+        margin-bottom: 14px
+
+    &-title
+      color: $brown1
+      letter-spacing .2em
+      margin-bottom: 20px
+      +media('md')
+        margin-bottom: 7px
+
+

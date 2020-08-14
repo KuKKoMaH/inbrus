@@ -1,0 +1,78 @@
+.aboutMeta
+  background: #fdf8f4
+  margin-top: -203px
+  padding: 314px 0 105px
+  overflow: hidden;
+  +media('md')
+    margin-top: -235px
+    padding: 288px 0 52px
+
+  &__container
+    display: flex;
+    align-items stretch
+    flex-wrap wrap
+
+  &__content, &__news
+    width: 370px
+    flex-shrink 0
+
+  &__news
+    +media('lg')
+      margin-top: 38px
+      width: 100%
+
+  &__image
+    flex: 1
+    padding-right: 12px
+    padding-top: 8px
+    +media('lg')
+      padding-right: 0
+    +media('md')
+      //width: 20%
+      //width: calc(100% - 230px)
+      width: 1px
+      padding-left: 24px
+      padding-top: 0
+      position: relative;
+
+    img
+      display: block;
+      margin: 0 auto
+      +media('lg')
+        margin: 0 0 0 auto
+      +media('md')
+        position: absolute;
+        height: 100%
+        width: auto;
+
+  &__content
+    display: flex;
+    flex-direction column
+    padding-bottom: 15px
+    +media('md')
+      //width: 80%
+      width: 230px
+
+  &__title
+    margin-bottom: 21px
+    +media('md')
+      margin-bottom: 14px
+
+  &__text
+    +media('md')
+      margin-bottom: 8px
+
+  &__buttons
+    margin-top: auto;
+
+    .btn
+      padding: 17px 10px 16px
+      margin-top: 10px
+      display: block;
+      font-size: 10px
+      font-weight: 500
+      letter-spacing .3em
+      +media('md')
+        font-size: 8px
+        padding: 13px 10px 15px
+

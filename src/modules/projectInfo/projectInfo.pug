@@ -1,0 +1,50 @@
+.projectInfo
+  .c
+    h1.projectInfo__title Дом «Неаполь»
+
+    .projectInfo__aside
+      .projectInfo__gallery.gallery
+        .gallery__slider
+          .gallery__items
+            .gallery__item: img(src='images/1_15.jpg')
+            .gallery__item: img(src='images/1_17.jpg')
+            .gallery__item: img(src='images/1_18.jpg')
+        .gallery__nav
+          button.navBtn.navBtn--prev: +svg('left-arrow')
+          button.navBtn.navBtn--next: +svg('left-arrow')
+      .projectInfo__thumbs
+        .projectInfo__thumb.projectInfo__thumb--active: img(src='images/1_15.jpg')
+        .projectInfo__thumb: img(src='images/1_17.jpg')
+        .projectInfo__thumb: img(src='images/1_18.jpg')
+
+    .projectInfo__info
+      .projectInfo__s
+        .projectInfo__s-label Площадь#[br]дома
+        .projectInfo__s-value 260 м#[sup 2]
+      .projectInfo__params
+        .projectInfo__param
+          +svg('single-bed')
+          | 5 Спален
+        .projectInfo__param
+          +svg('bath')
+          | 3 Санузла
+        .projectInfo__param
+          +svg('terrace')
+          | 2 Терассы
+      .projectInfo__material
+        | Материал стен:
+        span Клееный брус
+
+      .projectInfo__complect
+        div Комплектация:
+        .tabs
+          .tabs__headers
+            button.tabs__header.tabs__header--active ТЕПЛЫЙ КОНТУР
+            button.tabs__header «ПОД КЛЮЧ»
+
+      .projectInfo__price
+        | 5 750 000 р.
+        .projectInfo__price-old 5 950 000 р.
+
+      .projectInfo__form
+        a.btn.btn--type3(href='#') ПОЛУЧИТЬ БУКЛЕТ ДОМА НА E-MAIL

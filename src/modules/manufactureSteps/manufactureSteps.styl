@@ -1,0 +1,76 @@
+.manufactureSteps
+  margin: 120px 0 100px
+  +media('md')
+    margin: 20px 0 50px
+
+  &__item
+    display: flex;
+    margin-bottom: 29px
+    +media('lg')
+      flex-direction column
+    +media('md')
+      margin-bottom: 20px
+
+  &__content
+    background: url(../../images/wood-texture-white.jpg)
+    width: 50%
+    padding: 58px 70px 52px
+    +media('lg')
+      width: 100%
+    +media('md')
+      padding: 38px 28px 22px
+
+  &__aside
+    width: 50%
+    +media('lg')
+      width: 100%
+      height: 300px
+    +media('md')
+      height: 157px
+
+    .gallery
+      height: 100%
+
+      &__item
+        height: 100%
+
+  &__image
+    height: 100%
+    background: $grey1 50%
+    background-size: cover
+
+  &__label
+    margin-bottom: 4px
+    padding-left: 13px
+    +media('md')
+      margin-bottom: 2px
+
+    span
+      vertical-align: top;
+      font-size: 23px
+      line-height: 1.9
+      font-weight: bold;
+      background: $brown2
+      color: $white
+      padding: 3px 0px 6px
+      box-shadow -14px 0 0 0 $brown2, 14px 0 0 0 $brown2
+      +media('md')
+        font-size: 16px
+        line-height: 2.1
+        padding: 4px 0px 4px
+        box-shadow -11px 0 0 0 $brown2, 11px 0 0 0 $brown2
+
+  &__title
+    font-size: 18px
+    margin-bottom: 29px
+    +media('md')
+      font-size: 12px
+      margin-bottom: 12px
+
+  &__note
+    font-size: 12px
+    opacity: .5
+    margin-top: 18px
+    +media('md')
+      margin-top: 14px
+      font-size: 10px

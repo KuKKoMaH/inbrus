@@ -1,0 +1,29 @@
+.aboutInfo
+  .c
+    .aboutInfo__content
+      .aboutInfo__gallery
+        .gallery
+          .gallery__slider
+            .gallery__items
+              .gallery__item: img.swiper-lazy(data-src='images/1_15.jpg')
+              .gallery__item: img.swiper-lazy(data-src='images/1_17.jpg')
+              .gallery__item: img.swiper-lazy(data-src='images/1_18.jpg')
+          .gallery__nav
+            button.navBtn.navBtn--prev: +svg('left-arrow')
+            button.navBtn.navBtn--next: +svg('left-arrow')
+      .aboutInfo__text.content
+        p
+          | От 94 % наших клиентов приходят друзья по рекомендации, как к надежной и ответственной строительной организации. Многие заказчики говорят, что именно Инбрус учла все пожелания в проекте и воплотила их в жизнь.
+          br
+          | Инбрус - это выбор тех, кто выбирает высокое качество бруса. Мы контролируем все процессы строительства от выбора древесины до строительства домов. Привлекательные цены на пиломатериал и строительные услуги позволяют нам работать по всей стране, а так же поставлять брус на экспорт в Болгарию, Германиюи Эстонию.
+      .aboutInfo__bullets
+        .aboutInfo__bullet.aboutInfo__bullet--01
+          .aboutInfo__bullet-title ОТ 14500 #[small РУБ/М2]
+          .aboutInfo__bullet-text строим дома
+        .aboutInfo__bullet.aboutInfo__bullet--02
+          .aboutInfo__bullet-title 567 ГА
+          .aboutInfo__bullet-text площадь собств. делянок
+        .aboutInfo__bullet.aboutInfo__bullet--03
+          .aboutInfo__bullet-title 10 ЛЕТ
+          .aboutInfo__bullet-text гарантия качества
+

@@ -1,0 +1,10 @@
+#thank-modal.modal.micromodal-slide(aria-hidden="true")
+  .modal__overlay(tabindex="-1" data-micromodal-close)
+    .modal__container(role="dialog" aria-modal="true")
+      .modal__content
+        button.modal__close(data-micromodal-close): +svg('close')
+        .modal__title.h4 Форма отправлена
+        .modal__text
+          p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        .modal__button
+          button.btn(data-micromodal-close) ЗАКРЫТЬ

@@ -1,0 +1,13 @@
+extends pug/_layout
+
+block body
+  +breadcrumbs(['ГЛАВНАЯ', 'ПРОЕКТЫ'])
+  include modules/projectInfo/projectInfo
+  include modules/projectPlan/projectPlan
+  include modules/projectIncluded/projectIncluded
+  include modules/material/material
+  include modules/materialInfo/materialInfo
+  include modules/projectRelated/projectRelated
+  include modules/press/press
+
+

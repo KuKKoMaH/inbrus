@@ -1,0 +1,67 @@
+.press
+  padding: 104px 0 121px
+  background: $grey2
+  +media('md')
+    padding: 51px 0 30px
+
+  &__title
+    margin-bottom: 57px
+    +media('md')
+      margin-bottom: 22px
+
+  &__items
+    display: flex;
+    margin: 0px -15px
+    +media('lg')
+      flex-direction column
+      margin: 0
+
+  &__item
+    margin: 0 15px
+    flex: 1
+    +media('lg')
+      margin: 0 0 20px
+    +media('md')
+      margin: 0 0 10px
+
+  &__card
+    background: $white
+    padding: 35px 40px 40px
+    height: 100%
+    display: flex;
+    flex-direction column
+    +media('md')
+      padding: 25px 30px 31px
+
+  &__date
+    font-size: 12px
+    opacity: .5
+    margin-bottom: 15px
+    +media('md')
+      font-size: 10px
+      margin-bottom: 10px
+
+  &__header
+    color: $brown2
+    letter-spacing .3em
+    font-size: 10px
+    margin-bottom: 13px
+    +media('md')
+      font-size: 10px
+      margin-bottom: 10px
+
+  &__text
+    margin-bottom: 12px
+
+    div
+      overflow: hidden;
+      display: block;
+      display: -webkit-box;
+      max-height: calc(4em * 1.65)
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      +media('md')
+        max-height: calc(4em * 1.85)
+
+  &__btn
+    margin-top: auto;

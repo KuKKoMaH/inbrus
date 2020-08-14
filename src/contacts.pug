@@ -1,0 +1,7 @@
+extends pug/_layout
+
+block body
+  +breadcrumbs(['ГЛАВНАЯ', 'Контакты'], 'Контакты')
+  include modules/contactsPhones/contactsPhones
+  include modules/contacts/contacts
+

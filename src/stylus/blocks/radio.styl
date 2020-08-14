@@ -1,0 +1,59 @@
+.wpcf7-radio .wpcf7-list-item, .radio
+  cursor: pointer;
+
+  input
+    display: none
+
+  span
+    display: block
+    position: relative
+    padding: 3px 0 2px 40px
+    line-height: 1
+    font-size: 16px
+    anim()
+
+    &:not(:empty):before
+      margin-right: 16px
+
+    &:before, &:after
+      content: ''
+      display: block
+
+    &:before
+      position: absolute;
+      top: 0
+      left: 0
+      width: 21px
+      height: 21px
+      border-radius: 50%
+      background: #fff
+      border: 2px solid #a4a4a4
+      anim()
+
+    &:after
+      position: absolute
+      background: #ffffff
+      top: 7px;
+      left: 7px;
+      width: 7px
+      height: 7px
+      border-radius: 50%
+      opacity 0
+      anim()
+
+  input:checked ~ span
+
+    &:after
+      opacity 1
+
+    &:before
+      border-color: #ea7722
+      background: #ea7722
+
+  &:hover
+    span
+      &:before
+        border-color: #ea7722
+
+  &--warn
+    color: #e53641

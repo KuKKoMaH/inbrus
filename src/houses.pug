@@ -1,0 +1,7 @@
+extends pug/_layout
+
+block body
+  +breadcrumbs(['ГЛАВНАЯ', 'Построенные дома'], 'Построенные дома')
+  include modules/houses/houses
+  include modules/housesMap/housesMap
+  include modules/press/press

@@ -1,0 +1,64 @@
+.calc
+  padding: 57px 0 121px
+
+  &__title
+    margin-bottom: 49px
+
+  &__row
+    display: flex;
+    margin: 0 -15px 30px
+    align-items center
+    +media('lg')
+      flex-direction column
+      margin: 0
+
+  &__input
+    width: 33.3333%
+    padding: 0 15px
+    +media('lg')
+      width: 100%
+      padding: 0
+      margin-bottom: 30px
+
+    &--wide
+      width: 66.66666%
+      +media('lg')
+        width: 100%
+
+  &__note
+    font-size: 12px
+    opacity: .5
+    padding-top: 33px
+    +media('lg')
+      padding-top: 0
+
+  &__btn
+    display: inline-block;
+    padding-top: 33px
+    position: relative;
+    +media('md')
+      text-align: center;
+
+    .btn
+      padding: 29px 48px 29px
+
+  &__info
+    position: absolute;
+    text-align: right;
+    font-size: 12px
+    top: 100%
+    margin-top: 25px
+    right: 0
+    width 340px
+    +media('lg')
+      right: auto;
+      left: 0
+      position: static;
+      text-align: left;
+    +media('md')
+      width: 100%
+      text-align: center;
+
+  &__file
+    &-head
+      font-weight: 500

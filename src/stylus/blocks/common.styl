@@ -1,0 +1,546 @@
+*
+  letter-spacing 0.025em
+
+html
+  font-family: 'Montserrat', sans-serif;
+  color: $black
+  font-size: 15px
+  line-height: 1.7
+  background: #fff
+  //overflow: hidden;
+  +media('md')
+    font-size: 12px
+    line-height: 1.85
+
+@media print {
+  @page {
+    margin: 1cm;
+  }
+}
+
+body
+  overflow-x: hidden
+  overflow-y: auto
+
+html, body
+  //overflow-x: hidden
+  min-height 100vh
+
+.c
+  margin-left: auto
+  margin-right: auto
+  max-width: $container-lg
+  width: 100%
+  +media('lg')
+    max-width: $container-md
+  +media('md')
+    padding-left: 20px
+    padding-right: 20px
+    max-width: 100%
+
+.cf
+  cf()
+
+.lazy
+  visibility: hidden
+  opacity: 0
+
+  &.lazy--visible
+    visibility: visible
+    opacity: 1
+
+img[data-src],
+img[data-srcset]
+  //display: block;
+  min-height: 1px;
+
+.hidden
+  display: none
+
+#sprites
+  position: absolute
+  width: 0
+  height: 0
+  top: 0
+  left: 0
+
+.center
+  text-align: center;
+
+.small
+  font-size: .85rem
+  opacity: .5
+
+.link
+  color: $black
+  font-weight: 500
+  border-bottom: 1px solid $brown1
+  padding-bottom: 1px
+  anim()
+  +media('md')
+    padding-bottom: 0
+
+  &:hover
+    color: $brown2
+    border-color: #eee5dc
+
+  &:active
+    opacity: .8
+
+.nav
+  display: flex;
+
+  &__button
+    position: relative;
+    width: 80px
+    height: 80px
+    background: #191919
+    +media('md')
+      width: 70px
+      height: 70px
+
+    &:last-child
+      border-left: 1px solid #303030
+
+    svg
+      position: absolute;
+      fill: #ffffff
+      top: 50%
+      left: 50%
+      transform translate(-50%, -50%)
+      width: 19px
+      height: 19px
+      anim()
+
+    &--next
+      svg
+        transform translate(-50%, -50%) rotate(180deg)
+
+    &:hover
+      svg
+        fill #e33535
+
+.gallery
+  position: relative;
+
+  &__slider
+    height: 100%
+    overflow: hidden;
+
+  &__items
+    display: flex;
+    height: 100%
+    align-items flex-start
+
+  &__item
+    //height: 100%
+    width: 100%
+    flex-shrink 0
+
+  &__nav
+    position: absolute;
+    display: flex;
+    bottom: 35px
+    right: 34px
+    +media('md')
+      bottom: 10px
+      right: 8px
+
+  img
+    max-width 100%
+    height: auto;
+    display: block;
+    margin: 0 auto
+
+.bullets
+  display: flex;
+  flex-wrap wrap
+  margin: 0 -5px
+  +media('md')
+    flex-direction column
+    margin: 0
+
+  &__item
+    min-width 33.3333%
+    padding: 5px
+    flex: 1
+    +media('md')
+      padding: 0
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+
+  &__card
+    height: 100%
+    background: $brown2
+    padding: 23px 20px 21px 29px
+    color: $white
+    +media('md')
+      padding: 14px 20px 16px 29px
+
+  &__label
+    opacity: .75
+
+  &__value
+    font-size: 27px
+    line-height: 1.35
+    font-weight: bold;
+    +media('md')
+      font-size: 16px
+
+.icons
+  display: flex;
+  flex-wrap wrap
+  margin: -10px -20px
+  +media('md')
+    margin: -10px -23px
+
+  &__item
+    margin: 10px 20px
+    white-space nowrap
+    +media('md')
+      margin: 10px 23px
+
+  svg
+    fill $brown1
+    width: 24px
+    height: 24px
+    margin-right: 15px
+    vertical-align: middle;
+    margin-top: -4px
+    +media('md')
+      display: block;
+      margin-right: 0
+      margin-bottom: 4px
+      width: 18px
+      height: 18px
+
+.advantages
+  display: flex;
+  margin: -10px
+  flex-wrap wrap
+  +media('md')
+    margin: 0
+
+  &__item
+    width: 50%
+    padding: 10px
+    +media('md')
+      width: 100%
+      padding: 0
+      margin-bottom: 10px
+
+  &__card
+    background: $grey2
+    padding: 40px 60px 33px 40px
+    height: 100%
+    +media('md')
+      padding: 30px 40px 23px 30px
+
+  &__icon
+    margin-bottom: 10px
+    +media('md')
+      margin-bottom: 12px
+
+    svg
+      display: block;
+      width: 40px
+      height: 40px
+      fill $brown1
+
+  &__header
+    font-size: 18px
+    font-weight: 600
+    margin-bottom: 2px
+    +media('md')
+      font-size: 16px
+      margin-bottom: 3px
+
+  &__button
+    width: 100%
+    padding: 10px
+    +media('md')
+      padding: 0
+
+    .btn
+      width: 100%
+      padding-top: 22px;
+      padding-bottom: 26px;
+      +media('md')
+        padding-top: 16px
+        padding-bottom: 16px
+
+.people
+  display: flex;
+  flex-wrap wrap
+  margin: 0 -12px
+  +media('md')
+    margin: 0 -5px
+
+  &__item
+    width: 33.3333%
+    padding: 19px 12px
+    +media('lg')
+      padding: 12px 5px
+      width: 50%
+
+  &__image
+    position: relative;
+    margin-bottom: 13px
+    padding: 0 30px
+    +media('md')
+      padding: 0 20px
+      margin-bottom: 11px
+
+    &:before
+      content ''
+      display: block;
+      position: absolute;
+      left: 0
+      width: 100%
+      padding-bottom: 36%;
+      background: $grey1;
+      z-index: -1
+      top: 50%
+      transform translateY(-50%)
+      +media('md')
+        padding-bottom: 42%
+
+    img
+      display: block;
+      margin: 0 auto
+      max-width 100%
+
+  &__text
+    padding: 0 30px
+    +media('md')
+      padding: 0px
+      line-height: 1.5
+
+.content
+  & > *:first-child
+    margin-top: 0
+
+  p, ul, ol
+    margin-bottom: 10px
+    //+media('md')
+    //  margin-bottom: 33px
+
+    br
+      content ''
+      display: block;
+      height: 10px
+
+
+  .bullets, .gallery, blockquote, .advantages, .icons
+    margin-top: 55px
+    margin-bottom: 55px
+    +media('md')
+      margin-top: 30px
+      margin-bottom: 30px
+
+  .people
+    margin-top: 21px
+    margin-bottom: 44px
+    +media('md')
+      margin-top: 23px
+      margin-bottom: 25px
+
+
+  h1, h2, h3, h4, h5
+    margin-top: 60px
+    margin-bottom: 12px
+    +media('md')
+      margin-bottom: 8px
+
+  h6
+    margin-top: 60px
+    margin-bottom: 19px
+    +media('md')
+      margin-bottom: 14px
+
+  img
+    max-width 100%
+    height: auto;
+
+.video
+  display: block;
+  position: relative;
+  border: 0
+
+  img
+    width: 100%
+
+  iframe
+    position: absolute;
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+
+  &:after
+    content ''
+    position: absolute;
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: $black
+    opacity: .5
+
+  &__icon
+    position: absolute;
+    width: 70px
+    height: 70px
+    background: $white
+    top: 50%
+    left: 50%
+    margin-top: -35px
+    margin-left: -35px
+    z-index: 1
+    +media('md')
+      width: 50px
+      height: 50px
+      margin-top: -25px
+      margin-left: -25px
+
+    &:after
+      position: absolute;
+      content: ''
+      display: block;
+      border-left: 19px solid $brown1
+      border-top: 11px solid transparent
+      border-bottom: 11px solid transparent
+      top: 50%
+      left: 50%
+      margin-top: -11px;
+      margin-left: -8px;
+      +media('md')
+        border-left: 14px solid #ba9674;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        margin-top: -8px;
+        margin-left: -6px;
+
+.swiper-pagination-bullet
+  cursor: pointer;
+  display: inline-block;
+  width: 17px
+  height: 17px
+  border: 2px solid
+  color: $white
+  opacity: .15
+  margin: 0 5px
+  anim()
+
+  &:hover
+    opacity: 1
+
+  &:after
+    content: ''
+    display: block;
+    //position: absolute;
+    width: 7px
+    height: 7px
+    background: $brown2
+    margin-top: 3px
+    margin-left: 3px
+    opacity: 0
+
+  &-active
+    opacity: 1
+
+    &:after
+      opacity: 1
+
+.share
+  border: 1px solid #e8e7e6
+  border-left: 0
+  border-right: 0
+  padding: 22px 0 20px
+  display: flex;
+  flex-wrap wrap
+  align-items center
+  margin-top: 62px
+  +media('md')
+    padding: 15px 0
+    margin: 33px -5px 0
+
+  &__label
+    margin-right: 28px
+    +media('md')
+      width: 100%
+      font-size: 10px
+      margin: 0 5px 5px
+
+  ul
+    margin: 0
+    padding: 0
+    display: flex;
+    flex-wrap wrap
+
+  li
+    padding: 0
+    margin: 0
+    flex: 1
+    +media('md')
+      padding: 5px
+
+    &:before
+      display: none;
+
+  a
+    display: inline-flex
+    align-items center
+    justify-content center
+    position: relative
+    background: $brown1
+    line-height: 1.5
+    color: $white
+    text-align: center;
+    border: 0
+    margin-right: 10px
+    padding: 16px 28px 17px
+    anim()
+    +media('md')
+      margin: 5px 0
+      font-size: 8px
+      padding: 12px 10px 13px
+      width: 100%
+
+    &:focus
+      outline 0
+
+    &:hover
+      background: $brown2
+
+    &:active
+      background: #a18475
+
+  .ya-share2__title
+    letter-spacing .3em
+    font-size: 10px
+    font-weight: 500
+    text-transform: uppercase;
+
+.file
+  position: relative;
+  overflow: hidden;
+
+  input
+    position: absolute;
+    right: 0
+    bottom: 0
+    width: 200%
+    height: 200%
+    opacity: 0
+    cursor: pointer;
+
+  &:hover
+    .link
+      color: $brown2
+      border-color: #eee5dc
+
+  &__name
+    word-break break-word

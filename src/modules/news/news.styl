@@ -1,0 +1,135 @@
+.news
+  padding: 70px 0 20px
+
+  &__items
+    max-width 770px
+    margin: 0 auto
+    +media('md')
+      padding: 0 20px
+
+  &__item
+    position: relative;
+    display: block;
+    margin-bottom: 30px
+    border: 0
+    +media('md')
+      padding-top: 30px
+      margin-bottom: 20px
+
+    &:hover
+      & ^[0]__card:before
+        opacity: 0
+
+      & ^[0]__title
+        color: $brown2
+
+      & ^[0]__img
+        div
+          margin-left: 50px
+          +media('md')
+            margin: 0
+
+      & .link
+        color: $brown2
+        border-color: #eee5dc
+
+  &__card
+    margin-right: 30px
+    color: $black
+    position: relative;
+    background: $grey2
+    padding: 50px 0 50px 50px
+    overflow: hidden;
+    +media('md')
+      margin: 0
+      padding: 135px 30px 39px
+
+    &:before
+      content: ''
+      position: absolute;
+      background: url(../../images/wood-bg-black.png)
+      width 367px
+      height 370px
+      left: 50%
+      bottom: 0
+      margin-left: -90px;
+      margin-bottom: -140px;
+      pointer-events none
+      anim()
+      +media('md')
+        left: 0
+        bottom: auto;
+        top: 0
+        margin-bottom: 0
+        margin-top: -154px;
+        margin-left: -150px;
+
+  &__content
+    max-width 390px
+    display: flex;
+    flex-direction column
+    align-items flex-start
+    +media('md')
+      max-width 100%
+
+  &__date
+    font-size: 12px
+    line-height: 1;
+    font-weight: 500
+    color: $white
+    background: $brown2
+    padding: 8px 15px 9px
+    margin-bottom: 23px
+    +media('md')
+      font-size: 10px
+      padding: 5px 9px 5px
+      margin-bottom: 19px
+
+  &__title
+    display: block;
+    font-size: 18px
+    font-weight: bold;
+    line-height: 1.5
+    color: $black
+    border: 0
+    margin-bottom: 16px
+    anim()
+    +media('md')
+      font-size: 16px
+      margin-bottom: 13px
+
+  &__img
+    position: absolute;
+    right: 0
+    top: 50px
+    width: 270px
+    height: 210px
+    flex-shrink 0
+    border: 0
+    margin-left: auto;
+    anim()
+    +media('md')
+      top: 0
+      right: 30px
+      left: 30px
+      width: auto;
+      height: 145px
+
+    div
+      background-position: 100% 50%
+      background-size: cover;
+      right: 0
+      top: 0
+      height: 100%
+      anim(.15s)
+
+  &__text
+    margin-bottom: 11px
+    max-height: 1.7em * 3
+    overflow: hidden
+    +media('md')
+      margin-bottom: 14px
+
+  &__more
+    margin: 70px 0
+    text-align: center;

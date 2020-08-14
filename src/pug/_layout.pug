@@ -1,0 +1,27 @@
+include _mixins
+
+block html
+doctype html
+html
+  head
+    title Инбрус
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    meta#viewport(name="viewport" content="width=device-width, user-scalable=no")
+    link(rel="stylesheet" media="all" href="style.css")
+    block style
+
+  body(onunload="")
+    include ../modules/header/header
+    block body
+    include ../modules/footer/footer
+    .hidden
+    include ../modules/photoswipe/photoswipe
+    include ../modules/popup/popup-callback
+    include ../modules/popup/popup-politic
+    include ../modules/popup/popup-video
+    include ../modules/popup/popup-thank
+
+    script.
+      var __webpack_public_path__ = "/js/";
+    script(src='js/app.js')

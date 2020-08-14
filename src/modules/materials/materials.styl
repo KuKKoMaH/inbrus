@@ -1,0 +1,167 @@
+.materials
+  background: $grey2
+  padding: 120px 0
+  +media('md')
+    padding: 25px 0 60px
+
+  &__container
+    display: flex;
+    justify-content space-between
+    +media('md')
+      flex-direction column-reverse
+      align-items center
+
+  &__content
+    width: 400px
+    position: relative;
+    background: $brown1
+    +media('lg')
+      width: 320px
+    +media('md')
+      width: auto;
+
+
+  &__texts
+    overflow: hidden;
+    position: relative;
+
+    &:before
+      content: ''
+      position: absolute;
+      background: url(../../images/wood-bg.png) no-repeat
+      width: 539px
+      height: 535px
+      opacity: 0.1;
+      transform: rotate(90deg);
+      bottom: -325px;
+      right: -215px;
+      pointer-events none
+      +media('md')
+        bottom: -182px;
+        right: -267px;
+
+  &__text
+    position: absolute;
+    top: 0
+    left: 0
+    width: 100%
+    opacity: 0
+    pointer-events none
+    z-index: -1
+    color: $white
+    padding: 43px 50px 45px
+    anim()
+    +media('lg')
+      padding: 22px 30px 11px
+    +media('md')
+      display: flex;
+      flex-direction column-reverse
+
+    &--active
+      position: static;
+      pointer-events all
+      opacity: 1
+
+  &__sub
+    opacity: .5
+    margin-top: 54px
+    font-size: 10px
+    letter-spacing .3em
+    font-weight: 500
+    text-transform: uppercase;
+    +media('md')
+      text-transform: none
+      font-size: 16px
+      letter-spacing .025em
+      font-weight: 600
+      opacity: 1
+      margin-top: 0
+      margin-bottom: 14px
+
+  &__image
+    position: relative;
+    margin: -45px 0
+    +media('lg')
+      margin: -45px -260px -45px 0
+    +media('md')
+      margin: 0 0 31px
+
+    img
+      anim()
+      +media('md')
+        height: 285px
+        width: auto;
+
+  &__label
+    position: absolute;
+    top: 0
+    right: 0
+    font-size: 18px
+    line-height: 1.25
+    text-align: right;
+    padding-right: 42px
+    cursor: pointer;
+    +media('md')
+      font-size: 0
+
+    &:after
+      content: ''
+      position: absolute;
+      right: 0
+      top: -1px
+      margin-left: 17px
+      background: $white
+      width: 25px
+      height: 25px
+      border: 8px solid $brown2
+      anim()
+      +media('md')
+        margin-left: 0
+
+    &--active, &:hover
+      &:after
+        border-color: $brown1
+
+    &--1
+      transform translate(-260px, 45px)
+      +media('md')
+        transform translate(-175px, 48px)
+
+    &--2
+      transform translate(-343px, 132px)
+      +media('md')
+        transform translate(-235px, 127px)
+
+    &--3
+      transform translate(-418px, 240px)
+      +media('md')
+        transform translate(-180px, 227px)
+
+    &--4
+      transform translate(-342px, 356px)
+      +media('md')
+        transform translate(-74px, 48px)
+
+    &--5
+      transform translate(-272px, 454px)
+      +media('md')
+        transform translate(3px, 165px)
+
+  &__arrow
+    position: absolute;
+    border-left: 14px solid $brown1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    left: 100%
+    top: 0
+    anim()
+    +media('md')
+      top: auto !important
+      bottom: 100%
+      left: 50%
+      margin-left: -15px
+      border-left: 15px solid transparent
+      border-right: 15px solid transparent
+      border-top: 0
+      border-bottom: 14px solid $brown1
+

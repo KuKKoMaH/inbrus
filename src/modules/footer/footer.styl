@@ -1,0 +1,215 @@
+.footer
+  background: $black
+  color: $white
+
+  &__top
+    position: relative;
+    padding: 90px 0 86px
+    display: flex;
+    align-items flex-start
+    justify-content space-between
+    +media('lg')
+      flex-direction column
+      max-width 370px
+      margin: 0 auto
+      padding: 33px 0 35px
+
+  &__logo
+    max-width 100%
+    height: auto;
+
+  &__meta
+    margin-top: 35px
+    max-width 370px
+    font-size: 12px
+    opacity: .25
+    +media('lg')
+      font-size: 10px
+      line-height: 1.8
+      margin-top: 25px
+
+  &__left
+    margin-bottom: 160px
+    +media('lg')
+      margin-bottom: 20px
+
+  &__menu
+    padding-top: 9px
+    margin-bottom: 160px
+    +media('lg')
+      margin-bottom: 25px
+      padding-top: 10px
+
+    ul
+      list-style none
+      padding: 0
+      margin: 0
+      +media('lg')
+        display: flex;
+        flex-wrap wrap
+
+    li
+      padding: 0
+      margin-bottom: 18px
+      +media('lg')
+        margin-bottom: 10px
+        width: 50%
+
+      &:before
+        display: none;
+
+    a
+      border: 0
+      color: $white
+      anim()
+
+      &:hover
+        color: $brown1
+
+  &__right
+    max-width: 470px
+    width: 100%
+    +media('lg')
+      margin-bottom: 32px
+
+  &__phone
+    padding-bottom: 6px
+    a
+      display: inline-block;
+      background: #2a1b14
+      color: $white
+      font-size: 36px
+      line-height: 1
+      letter-spacing .025em
+      padding: 9px 23px
+      border: 0
+      margin-bottom: 6px
+    +media('lg')
+      text-align: center;
+      a
+        font-size: 28px
+        padding: 11px 23px
+        margin-bottom: 0
+
+  &__place
+    margin-top: 37px
+    max-width 370px
+    padding-left: 30px
+    position: relative;
+    +media('lg')
+      padding-left: 22px
+      margin-top: 33px
+
+    svg
+      position: absolute;
+      fill: $brown1
+      width: 20px
+      height: 20px
+      top: 0
+      left: 0
+      +media('lg')
+        width: 16px
+        height: 16px
+
+  &__label
+    color: $brown1
+    font-size: 10px
+    letter-spacing .3em
+    font-weight: 500
+    padding-left: 3px
+    margin-bottom: 6px
+    +media('lg')
+      font-size: 8px
+      margin-bottom: 2px
+
+  &__name
+    font-size: 12px
+    opacity: .25
+    padding-left: 2px
+    margin-bottom: 1px
+    +media('lg')
+      font-size: 10px
+
+  &__address
+    +media('lg')
+      font-size: 12px
+
+  &__contact
+    position: absolute;
+    left: 0
+    bottom: 91px
+    +media('lg')
+      width: 100%
+      position: static;
+
+  &__email-label
+    font-size: 10px
+    letter-spacing .3em
+    font-weight: 500
+    margin-bottom: 4px
+    color: $brown1
+    +media('lg')
+      font-size: 8px
+
+  &__email
+    font-size: 18px
+    color: $white
+    border: 0
+    +media('lg')
+      font-size: 16px
+
+  &__socials
+    display: flex;
+    margin-top: 43px
+    +media('lg')
+      flex-direction column
+      margin-top: 31px
+      align-items stretch
+      width: 100%
+
+  &__social
+    display: block;
+    border: 0
+    background: #2a1b14
+    color: $white
+    font-size: 10px
+    text-align: center;
+    letter-spacing .3em
+    font-weight: 500
+    padding: 16px 28px 15px
+    margin-right: 10px
+    +media('lg')
+      width: 100%
+      font-size: 8px
+      margin: 0 0 5px
+      padding: 13px 28px 14px
+
+  &__bottom
+    background: #190d07
+    padding: 27px 0 29px
+
+    & .c
+      display: flex;
+      justify-content space-between
+      +media('lg')
+        max-width 320px
+        flex-direction column
+        align-items center
+        text-align: center;
+
+
+  &__copyright
+    opacity: .5
+
+  &__link
+    display: inline-block;
+    font-size: 12px
+    margin-left: 17px
+    color: $white
+    border: 0
+    text-decoration: underline;
+    +media('lg')
+      margin-left: 0
+
+    &:hover
+      text-decoration: none;

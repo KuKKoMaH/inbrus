@@ -1,0 +1,105 @@
+.calculator
+  .c
+    .calculator__title.h2 Что входит в стандартную комплектацию за #[span#calc-meter 21&nbsp;900&nbsp;руб./&nbsp;м#[sup 2]]
+    .calculator__row
+      .calculator__select
+        .calculator__label Выберите комплектацию
+        select.select.select--sm(name='equipment')
+          option(value='0' ) теплый контур
+          option(value='1' ) под ключ
+      .calculator__select
+        .calculator__label Выберите материал
+        select.select.select--sm(name='material')
+          option(value='клееный брус') клееный брус
+          option(value='клееный брус 2') клееный брус 2
+          option(value='клееный брус 3') клееный брус 3
+          option(value='клееный брус 4') клееный брус 4
+          option(value='клееный брус 5') клееный брус 5
+          option(value='клееный брус 6') клееный брус 6
+          option(value='клееный брус 7') клееный брус 7
+          option(value='клееный брус 8') клееный брус 8
+          option(value='клееный брус 9') клееный брус 9
+      .calculator__input
+        .calculator__label Введите площадь дома
+        .input.input--sm
+          input.input__input(value='120' name='s')
+          .input__note М#[sup 2]
+      .calculator__result
+        div Стоимость дома
+        .calculator__total#calc 2 700 000 р.
+
+    .calculator__cols
+      .calculator__col
+        label.calculator__checkbox
+          input(type='checkbox' disabled data-0)
+          span: +svg('select')
+          .calculator__header Фундамент
+          .calculator__note винтовые сваи
+        label.calculator__checkbox
+          input(type='checkbox' disabled data-0 data-1)
+          span: +svg('select')
+          .calculator__header Стеновой комплект (стены и балки перекрытий)
+          .calculator__note брус 202*хх, произволство Инбрус
+        label.calculator__checkbox
+          input(type='checkbox' disabled)
+          span: +svg('select')
+          .calculator__header Кровля
+          .calculator__note металлочерепица название
+
+      .calculator__col
+        label.calculator__checkbox
+          input(type='checkbox' disabled)
+          span: +svg('select')
+          .calculator__header Утепленная кровля
+          .calculator__note плотность хх м2
+        label.calculator__checkbox
+          input(type='checkbox' disabled)
+          span: +svg('select')
+          .calculator__header Окна ПВХ
+          .calculator__note профиль XX м22-х камеерный стеклопакет
+        label.calculator__checkbox
+          input(type='checkbox' disabled)
+          span: +svg('select')
+          .calculator__header Сборка дома
+          .calculator__note опыт бригады в строительстведомов от 20 лет
+
+      .calculator__col
+        label.calculator__checkbox
+          input(type='checkbox' disabled)
+          span: +svg('select')
+          .calculator__header Утепление перекрытий
+        label.calculator__checkbox
+          input(type='checkbox' disabled)
+          span: +svg('select')
+          .calculator__header Черновой пол и потолок
+        label.calculator__checkbox
+          input(type='checkbox' disabled)
+          span: +svg('select')
+          .calculator__header Покраска дома
+          .calculator__note краска
+        label.calculator__checkbox
+          input(type='checkbox' disabled)
+          span: +svg('select')
+          .calculator__header Инженерные системы
+          .calculator__note отопление, канализация,водоснабжение, электрика
+
+    .calculator__form
+      img.calculator__form-img.lazy(data-src='modules/calculator/img/calculator-img.png')
+      img.calculator__form-img-sm.lazy(data-src='modules/calculator/img/calculator-img-sm.png')
+      .calculator__form-title Хотите изменить комплектацию или нужно индивидуальное проектирование вашего дома?
+      .calculator__form-text Это совсем просто! Назначьте встречу с одним из наших архитекторов и на основании ваших идей он подберет лучшую комплектацию и создаст индивидуальную планировку.
+      button.btn.btn--type3 ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+
+script.
+  var CALCULATOR_PRICES = { '0': 21900, '1': 35500 };
+  var CALCULATOR_CONFIG = {
+    'клееный брус':   { '0': 10, '1': 20 },
+    'клееный брус 2': { '0': 30, '1': 40 },
+    'клееный брус 3': { '0': 50, '1': 60 },
+    'клееный брус 4': { '0': 70, '1': 80 },
+    'клееный брус 5': { '0': 90, '1': 100 },
+    'клееный брус 6': { '0': 110, '1': 120 },
+    'клееный брус 7': { '0': 130, '1': 140 },
+    'клееный брус 8': { '0': 150, '1': 160 },
+    'клееный брус 9': { '0': 170, '1': 180 },
+  }

@@ -1,0 +1,122 @@
+.aboutWork
+  position: relative;
+  padding: 107px 0
+  overflow: hidden;
+  +media('md')
+    padding: 52px 0
+
+  &:before, &:after
+    content: ''
+    position: absolute;
+    background: url(../../images/wood-bg-black.png) no-repeat
+    width 367px
+    height 370px
+
+  &:before
+    right: 50%
+    margin-right: 560px;
+    top: 720px;
+
+  &:after
+    left: 50%
+    margin-left: 570px;
+    top: 1120px;
+
+  &__title
+    margin-bottom: 59px
+    +media('md')
+      margin-bottom: 31px
+
+  &__item
+    border-top: 1px solid #e8e7e6
+    padding-top: 63px
+    max-width 970px
+    width: 100%
+    display: flex;
+    +media('md')
+      padding-top: 33px
+      flex-direction column
+
+    &:nth-child(2n + 1)
+      margin-left: 200px
+      +media('lg')
+        margin-left: 0
+
+  &__aside
+    width: 300px
+    flex-shrink 0
+    margin-right: 40px
+    position: relative;
+    margin-bottom: 96px
+    +media('md')
+      margin-bottom: 40px
+      width: 100%
+      margin-right: 0
+
+  &__image
+    position: absolute;
+    left: 30px
+    top: 7px
+    +media('md')
+      left: 50%
+      transform translateX(-50%)
+
+    &:after
+      content: ''
+      position: absolute;
+      left: 80px
+      right: -30px
+      top: 30px
+      bottom: -30px
+      background: $grey2;
+      z-index: -1
+      +media('md')
+        left: 60px
+
+    img
+      display: block;
+      +media('md')
+        max-height 247px
+        width: auto;
+
+  &__label
+    position: relative;
+    z-index: 1
+    margin-top: 243px
+    max-width 220px
+    +media('md')
+      margin-top: 226px
+      left: 50%
+      transform translateX(-50%)
+      margin-left: -30px
+
+    span
+      display: inline-block;
+      color: $white
+      background: $brown2
+      font-size: 18px
+      font-weight: 600
+      padding: 1px 14px 3px;
+      margin-bottom: 4px;
+      +media('md')
+        font-size: 16px
+        line-height: 1
+        padding: 5px 11px 7px
+        margin-bottom: 5px
+
+  &__content
+    margin-bottom: 70px
+    +media('md')
+      margin-bottom: 40px
+
+  &__sub
+    display: inline-block;
+    color: $white
+    font-style italic
+    background: $brown1
+    margin-top: 7px
+    padding: 8px 14px
+    +media('md')
+      margin-top: 3px
+      padding: 0px 14px
+      line-height 2.4

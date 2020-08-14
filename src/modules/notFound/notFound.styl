@@ -1,0 +1,35 @@
+.notFound
+  text-align: center;
+  padding: 110px 0
+  background: $grey2
+  overflow: hidden;
+  position: relative;
+  +media('md')
+    padding: 54px 0
+
+  &:before, &:after
+    content ''
+    background: url(../../images/wood-bg-black.png);
+    width 367px
+    height 370px
+    position: absolute;
+
+  &:before
+    right: 50%
+    margin-right: 490px;
+    top: -190px;
+
+  &:after
+    left: 50%
+    margin-left: 470px;
+    bottom: -190px;
+
+  h1
+    font-size: 48px
+    margin-bottom: 20px
+
+  img
+    max-width 100%
+    width: 770px
+    margin: -5px 0
+

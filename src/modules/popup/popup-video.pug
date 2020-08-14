@@ -1,0 +1,7 @@
+#video-modal.modal.micromodal-slide(aria-hidden="true")
+  .modal__overlay(tabindex="-1" data-micromodal-close)
+    .modal__container(role="dialog" aria-modal="true")
+      .modal__video
+        button.modal__close(data-micromodal-close): +svg('close')
+        .modal__iframe
+        //iframe(allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)

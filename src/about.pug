@@ -1,0 +1,9 @@
+extends pug/_layout
+
+block body
+  +breadcrumbs(['ГЛАВНАЯ', 'О компании'], 'О компании')
+  include modules/aboutInfo/aboutInfo
+  include modules/aboutWork/aboutWork
+  include modules/aboutVideo/aboutVideo
+  include modules/aboutMeta/aboutMeta
+

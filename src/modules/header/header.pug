@@ -1,0 +1,102 @@
+header.header
+  .header__placeholder
+  .header__container
+    .header__top
+      .c
+        a.header__logo.header__logo--lg(href='/'): img(src='modules/header/img/logo.png')
+        a.header__logo.header__logo--sm(href='/'): img(src='modules/header/img/logo-sm.png')
+        a.header__phone(href='tel:123123')
+          +svg('phone')
+          | 8 800 201 55 09
+        .header__aside
+          .header__socials.header__socials--lg
+            a.header__button(href='#' target='blank') ВКОНТАКТЕ
+            a.header__button(href='#' target='blank') FACEBOOK
+            a.header__button(href='#' target='blank') INSTAGRAM
+          button.header__menu-search.header__menu-search--lg: +svg('search')
+        button.header__menu-button: +svg('menu')
+
+    .header__bottom
+      .c
+        .header__menu
+          ul
+            li: a(href='#') Компания
+            li(data-toggle='projects'): a(href='#')
+              +svg('left-arrow')
+              | Проекты
+            li: a(href='#') Производство
+            li: a(href='#') Построенные дома
+            li(data-toggle='services'): a(href='#')
+              +svg('left-arrow')
+              | Услуги
+            li: a(href='#') Контакты
+
+        a.header__menu-search.header__menu-search--sm(href='#')
+          | ПОИСК ПО САЙТУ
+          +svg('search')
+        .header__socials.header__socials--sm
+          .header__social: a.header__button(href='#' target='blank') ВКОНТАКТЕ
+          .header__social: a.header__button(href='#' target='blank') FACEBOOK
+          .header__social: a.header__button(href='#' target='blank') INSTAGRAM
+
+        .header__callback
+          button.link(data-micromodal-trigger="callback-modal") заказать обратный звонок
+
+      .header__submenu(data-category='projects')
+        .c
+          button.header__back
+            +svg('left-arrow')
+            | Назад
+          .header__projects
+            //.header__project: a(href='#' style='background-image: url(images/1_15.jpg)')
+            //  span Дома из клееного бруса
+            //.header__project: a(href='#' style='background-image: url(images/1_17.jpg)')
+            //  span Каркасно-брусовые дома
+            //.header__project: a(href='#' style='background-image: url(images/1_18.jpg)')
+            //  span Комбинированные дома
+            //.header__project: a(href='#' style='background-image: url(images/1_21.jpg)')
+            //  span Бани
+            //.header__project: a(href='#' style='background-image: url(images/1_24.jpg)')
+            //  span Проектирование
+
+      .header__submenu(data-category='services')
+        .c
+          button.header__back
+            +svg('left-arrow')
+            | Назад
+          .header__services
+            ul
+              li
+                a(href='#')
+                ul
+                  li: a.link(href='#') Кредитование
+                  li: a.link(href='#') Индивидуальное проектирование
+                  li: a.link(href='#') Строительство домов из кирпича и блоков
+                  li: a.link(href='#') Фундаменты из кирпича и блоков
+              li
+                a(href='#')
+                ul
+                  li: a.link(href='#') Кровельные работы
+                  li: a.link(href='#') Отделочные работы
+                  li: a.link(href='#') Инженерные коммуникации
+              li
+                a(href='#')
+                ul
+                  li: a.link(href='#') Покраска деревянных домов
+                  li: a.link(href='#') Дизайн интерьеров
+                  li: a.link(href='#') Ландшафтный дизайн
+
+  .header__search
+    .header__search-bar
+      .c
+        .header__search-form
+          input.header__search-input(placeholder='Введите ключевые слова для поиска...')
+          button.btn.header__search-button ПОИСК
+      .header__search-sub
+        .c
+          a.link(href='#') дом из бруса
+          a.link(href='#') баня
+          a.link(href='#') каркасный дом
+          a.link(href='#') проекты
+          button.header__search-close
+            +svg('close')

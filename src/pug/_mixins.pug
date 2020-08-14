@@ -1,0 +1,38 @@
+mixin svg(name, className)
+  svg(class=className): use(xlink:href="icons/icons.svg#icon-" + name)
+
+mixin card(img)
+  .card
+    .card__image.lazy(data-bg=img)
+    .card__content
+      .card__label 158 м#[sup 2]
+      .card__title Неаполь Неаполь Неаполь Неаполь Неаполь Неаполь Неаполь Неаполь Неаполь Неаполь Неаполь Неаполь Неаполь Неаполь Неаполь Неаполь Неаполь Неаполь
+      .card__params
+        .card__param
+          +svg('single-bed')
+          | 5 Спален
+        .card__param
+          +svg('terrace')
+          | 2 Терассы
+        .card__param
+          +svg('bath')
+          | 3 Санузла
+      .card__footer
+        .card__price от 2 300 000 р.
+        a.card__btn(href='#') ПОДРОБНЕЕ
+
+mixin breadcrumbs(items, h1)
+  .breadcrumbs(class=h1 && 'breadcrumbs--title')
+    .c
+      .breadcrumbs__items
+        span
+          span
+            each item, i in items
+              if i < items.length - 1
+                a(href="#")=item
+                +svg('left-arrow_2')
+                | #{' '}
+              else
+                span.breadcrumb_last=item
+      if h1
+        h1.h2.breadcrumbs__title=h1

@@ -1,0 +1,27 @@
+#callback-modal.modal.micromodal-slide(aria-hidden="true")
+  .modal__overlay(tabindex="-1" data-micromodal-close)
+    .modal__container(role="dialog" aria-modal="true")
+      .modal__content
+        button.modal__close(data-micromodal-close): +svg('close')
+        .modal__title.h4 Название формы
+        .modal__text
+          p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        .modal__form
+          .input
+            label.input__label ВАШЕ ИМЯ
+            span: input.input__input
+          .input
+            label.input__label ВАШ ТЕЛЕФОН
+            span: input.input__input
+          .input
+            label.input__label ВАШ EMAIL
+            span: input.input__input
+          .input
+            .file
+              input(type='file')
+              span.link.file__name Прикрепите файл
+
+          .modal__button
+            button.btn(data-micromodal-close) ОТПРАВИТЬ
+
+        .modal__note Отправляя форму вы даете согласие на #[span обработку персональных данных] и согласны с #[span(data-micromodal-trigger="politic-modal") политикой конфидициальности]

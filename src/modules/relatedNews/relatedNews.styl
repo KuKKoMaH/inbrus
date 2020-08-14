@@ -1,0 +1,79 @@
+.relatedNews
+  &__header
+    display: flex;
+    align-items center
+    justify-content space-between
+    margin-bottom: 28px
+    +media('md')
+      margin-bottom: 26px
+
+  &__item
+    position: relative;
+    display: block;
+    margin-bottom: 10px
+    background: $brown1
+    color: $white
+    padding: 40px 40px 35px
+    border: 0
+    overflow: hidden;
+    anim()
+    +media('md')
+      padding: 30px 30px 27px
+
+    &:before
+      content: ''
+      position: absolute;
+      background: url(../../images/wood-bg.png) no-repeat
+      width: 539px
+      height: 535px
+      opacity: 0.1;
+      transform: rotate(90deg);
+      top: -209px;
+      right: -402px;
+      pointer-events none
+
+    &--bg2
+      &:before
+        transform: rotate(90deg);
+        top: -300px;
+        right: 94px;
+
+    &:hover
+      background-color: #ae8a6b
+
+    & > *
+      position: relative;
+      z-index: 1
+
+  &__date
+    margin-bottom: 17px
+    background: $brown2
+    display: inline-block;
+    vertical-align: top;
+    padding: 9px 15px 8px
+    font-size: 12px
+    line-height: 1
+    +media('md')
+      font-size: 10px
+      padding: 5px 9px 5px
+      margin-bottom: 12px
+
+  &__title
+    font-size: 18px
+    font-weight: 600
+    +media('md')
+      font-size: 16px
+
+  &__content
+    margin-top: 10px
+    +media('md')
+      margin-top: 5px
+
+    div
+      overflow: hidden;
+      display: block;
+      display: -webkit-box;
+      max-height: calc(2em * 1.65)
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+

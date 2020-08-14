@@ -1,0 +1,58 @@
+.btn
+  display: inline-flex
+  align-items center
+  justify-content center
+  position: relative
+  font-weight: bold;
+  background: $brown1
+  padding: 27px 48px 28px
+  line-height: 1.5
+  color: $white
+  text-align: center;
+  border: 0
+  letter-spacing 0
+  anim()
+  +media('md')
+    padding: 16px 30px 16px
+
+  &:focus
+    outline 0
+
+  &:hover
+    background: $brown2
+
+  &:active
+    background: #a18475
+
+  &--type3
+    background: $brown2
+
+    &:hover
+      background: #967564
+
+    &:active
+      background: #a18475
+
+  &--50
+    font-size: 12px
+    padding: 16px 30px 16px
+    +media('md')
+      font-size: 10px
+      padding: 13px 24px 12px
+
+  &--70
+    padding: 22px 36px 26px
+    +media('md')
+      padding: 15px 19px 17px
+
+  &--type4
+    background: $white
+    color: $brown1
+
+    &:hover
+      color: $brown2
+      background: $white
+
+    &:active
+      color: rgba($brown2, .8)
+      background: $white

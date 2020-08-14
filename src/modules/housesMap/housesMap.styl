@@ -1,0 +1,41 @@
+.housesMap
+  padding: 82px 0 88px
+  background: #8a6552 url(../../images/wood-texture-brown.jpg) 50% 50%
+  +media('md')
+    padding: 38px 0 36px
+
+  &__title
+    color: $white
+    text-align: center;
+    letter-spacing .025em
+
+  &__map
+    position: relative;
+    background: url(img/housesMap-map.png)
+    width 968px
+    height 528px
+    margin: -1px auto 0
+    transform-origin 50% 50%
+    +media('lg')
+      zoom: .65
+    +media('md')
+      zoom: .3
+      margin-top: 25px
+
+  &__marker
+    position: absolute;
+    width: 18px
+    height: 18px
+    background: $brown2
+    border: 4px solid $white
+    margin-top: -9px
+    margin-left: -9px
+
+    &:before
+      content ''
+      background: url(img/marker.png)
+      width 30px
+      height 149px
+      position: absolute;
+      left: 4px;
+      bottom: 5px;

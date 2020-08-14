@@ -1,0 +1,120 @@
+.reasons
+  padding: 52px 0 20px
+  +media('md')
+    padding: 22px 0 20px
+
+  &__title
+    margin-bottom: 52px
+    +media('md')
+      padding: 0 20px
+      text-align: center;
+      margin-bottom: 23px
+
+    span
+      color: $brown1
+
+  &__items
+    counter-reset: reasons
+
+  &__item
+    display: flex;
+    background: #f7f5f4
+
+    &:nth-child(2n)
+      flex-direction row-reverse
+      +media('md')
+        flex-direction column
+
+    +media('md')
+      flex-direction column
+
+  &__aside
+    width: 50%
+    position: relative;
+
+    &:before
+      display: block;
+      content ''
+      width: 100%
+      padding-bottom: 60%
+
+    +media('md')
+      width: 100%
+
+    & > *
+      position: absolute;
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+
+    & .gallery
+      height: 100%
+
+      &__item
+        height: 100%
+
+  &__image
+    width: 100%
+    height: 100%
+    background-size: cover
+    background-position: 50%
+    opacity: 0
+    anim()
+
+    &.swiper-lazy-loaded
+      opacity: 1
+
+  &__content
+    position: relative;
+    width: 50%
+    background: url(../../images/wood-texture-white.jpg)
+    padding: 70px 50px 50px 70px
+    display: flex;
+    flex-direction column
+    justify-content space-around
+    +media('lg')
+      padding: 20px 30px
+    +media('md')
+      width: 100%
+      padding: 32px 30px 22px
+
+    &:before
+      counter-increment: reasons;
+      content: '0' counter(reasons)
+      display: block;
+      font-size: 21px
+      line-height: 50px
+      color: $white
+      background: $brown2
+      font-weight: bold;
+      width: 50px
+      text-align: center;
+      +media('md')
+        position: absolute;
+        bottom: 100%
+        margin-bottom: 30px
+        left: 30px
+        width: 40px
+        line-height: 40px
+        font-size: 16px
+
+  &__header
+    font-size: 23px
+    font-weight: bold;
+    line-height: 1.4
+    margin-bottom: 21px
+    +media('md')
+      font-size: 16px
+      line-height: 1.5
+      margin-bottom: 19px
+
+  &__action
+    text-align: center;
+    background: $grey1
+    padding: 70px 0
+    +media('md')
+      padding: 30px 40px
+      & .btn
+        padding-left: 15px
+        padding-right: 15px

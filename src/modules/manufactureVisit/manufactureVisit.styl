@@ -1,0 +1,49 @@
+.manufactureVisit
+  padding: 72px 0 80px
+  background: $brown1
+  color: $white
+  position: relative;
+  overflow: hidden;
+  +media('md')
+    padding: 34px 24px 169px
+
+  &:before
+    content: ''
+    position: absolute;
+    background: url(../../images/wood-bg-white.png)
+    width 539px
+    height 544px
+    left: 50%
+    top: 0
+    margin-top: -140px;
+    margin-left: -30px;
+    pointer-events none
+
+  &__content
+    max-width 570px
+
+  &__title
+    margin-bottom: 27px
+    +media('md')
+      font-size: 16px
+      line-height: 1.5
+      margin-bottom: 13px
+
+  &__text
+    margin-bottom: 32px
+    +media('md')
+      margin-bottom: 18px
+
+  &__image
+    position: absolute;
+    left: 50%
+    top: 50%
+    margin-left: 25px;
+    margin-top: -283px;
+    +media('lg')
+      margin-left: 215px;
+    +media('md')
+      top: 100%
+      margin-top: -169px;
+      margin-left: -112px;
+      max-height: 231px;

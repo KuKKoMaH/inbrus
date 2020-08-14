@@ -1,0 +1,62 @@
+.wpcf7-checkbox .wpcf7-list-item, .checkbox
+  display: inline-block;
+  cursor: pointer;
+
+  input
+    display: none
+
+  span
+    display: block
+    position: relative
+    font-size: 12px
+    font-weight: 500
+    line-height: 17px
+    letter-spacing .3em
+    padding-left: 30px
+    text-transform: uppercase;
+    anim()
+    +media('md')
+      font-size: 8px
+      padding-left: 27px
+
+    &:not(:empty):before
+      margin-right: 16px
+
+    &:before, &:after
+      content: ''
+      display: block
+
+    &:before
+      position: absolute;
+      top: 0
+      left: 0
+      width: 17px
+      height: 17px
+      background: #fff
+      border: 2px solid #eee8e5
+      anim()
+
+    &:after
+      position: absolute
+      width: 7px
+      height: 7px
+      top: 5px
+      left: 5px
+      background: $brown2
+      opacity 0
+      anim()
+
+  input:checked ~ span
+    &:after
+      opacity 1
+
+    &:before
+      border-color: $brown2
+
+  &:hover
+    span
+      &:before
+        border-color: $brown2
+
+  &--warn
+    color: #e53641

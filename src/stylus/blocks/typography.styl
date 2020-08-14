@@ -1,0 +1,149 @@
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+  letter-spacing 0
+  line-height: 1.25
+  font-weight: bold;
+
+h1, .h1
+  font-size: 60px
+  line-height: 1.2
+  +media('md')
+    font-size: 32px
+    line-height: 1.25
+
+h2, .h2
+  font-size: 44px
+  +media('md')
+    font-size: 22px
+    line-height: 1.47
+
+h3, .h3
+  font-size: 31px
+  +media('md')
+    font-size: 22px
+
+h4, .h4
+  font-size: 27px
+  +media('md')
+    font-size: 22px
+
+h5, .h5
+  font-size: 23px
+  +media('md')
+    font-size: 22px
+
+h6, .h6
+  font-size: 18px
+  margin-bottom: .85em
+  letter-spacing .025em
+  +media('md')
+    font-size: 16px
+    line-height: 1.5;
+    margin-bottom: .5em
+
+b, strong
+  font-weight: 600
+
+p
+  margin-bottom: .7em
+  +media('md')
+    margin-bottom: .8em
+
+a
+  //color: $black
+  //color: inherit
+  color: $brown2
+  border-bottom: 1px solid transparent
+  //padding-bottom: 2px
+  anim()
+
+  &:hover
+    border-color: $brown2
+
+//&:hover
+//  border-color: #e7533b
+
+ul, ol
+  margin-bottom: 1.55em
+  line-height: 1.5
+
+  li
+    margin-bottom: 1.2em
+    position relative
+    +media('md')
+      margin-bottom: .75em
+
+ul
+  li
+    position: relative;
+    padding-left: 39px
+    +media('md')
+      padding-left: 29px
+
+    &:before
+      content: ''
+      position: absolute;
+      display: block
+      width: 25px
+      height: 25px
+      border: 8px solid $brown2
+      background: $white
+      left: 0
+      top: 0
+      +media('md')
+        width: 17px
+        height: 17px
+        border-width: 5px
+
+ol
+  counter-reset: list;
+  list-style: decimal
+  padding-left: 1.55em
+
+del, s
+  text-decoration: line-through
+
+blockquote
+  background: $brown2 url(../../images/wood-bg-white.png) -50px -236px no-repeat
+  color: $white
+  font-size: 18px
+  line-height: 1.6
+  padding: 32px 40px 33px
+  position: relative;
+  overflow: hidden;
+  +media('md')
+    font-size: 12px
+    line-height: 1.9
+    padding: 24px 29px 23px
+
+.wp-block-image
+  margin-bottom: 3rem
+  @media screen and (max-width: $breakpoint-lg - 1)
+    margin-bottom: 3.5rem
+
+  img
+    max-width 100%
+    height: auto;
+    display: block;
+
+  figcaption
+    margin: 10px 0 0
+    font-size: .85rem
+
+.wp-block-gallery
+  & li
+    &:before
+      display: none;
+
+.has-small-font-size
+  font-size: 1rem
+
+table
+  width: 100%
+  border-collapse collapse
+
+hr
+  border-color: #e8e7e6;
+  margin: 60px 0 50px;
+  +media('md')
+    margin: 30px

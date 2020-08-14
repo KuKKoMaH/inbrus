@@ -1,0 +1,35 @@
+.aboutVideo
+  //margin-bottom: -100px
+
+  &__container
+    position: relative;
+    z-index: 1
+    display: flex;
+    background: $brown1 url("img/wood-bg-white.png") calc(100% + 250px) calc(100% + 82px) no-repeat
+    +media('lg')
+      flex-direction column
+
+  &__image
+    flex-shrink 0
+
+  &__content
+    color: $white
+    display: flex;
+    flex-direction column
+    justify-content center
+    padding: 20px 68px 20px
+    +media('md')
+      padding: 30px 29px 35px
+
+  &__title
+    margin-bottom: 31px
+    +media('md')
+      margin-bottom: 11px
+
+  &__text
+    font-size: 18px
+    max-width 280px
+    line-height: 1.45;
+    +media('md')
+      font-size: 12px
+      line-height: 1.8;

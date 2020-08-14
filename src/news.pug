@@ -1,0 +1,6 @@
+extends pug/_layout
+
+block body
+  +breadcrumbs(['ГЛАВНАЯ', 'НОВОСТИ'], 'Новости')
+  include modules/news/news
+
