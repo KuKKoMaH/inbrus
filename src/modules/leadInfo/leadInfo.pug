@@ -1,0 +1,34 @@
+.leadInfo
+  .c
+    h2.leadInfo__title Зачем мы#[br]построили дом-офис:
+    .leadInfo__items
+      .leadInfo__item
+        .leadInfo__counter 01
+        .leadInfo__header ПОКАЗАТЬ, КАК МЫ СТРОИМ
+        .leadInfo__content
+          p Мы проектируем, производим, строим и контролируем все процессы строительства дома и делаем это ТЛИЧНО.
+          p Зимой у нас всегда тепло, а летом прохладно!
+      .leadInfo__item.leadInfo__item--placeholder
+      .leadInfo__item
+        .leadInfo__counter 02
+        .leadInfo__header СЧАСТЬЕ СОТРУДНИКОВ
+        .leadInfo__content
+          p Счастливые сотрудники - счастливые клиенты.
+          p В деревянном доме не только уютно жить, но и уютно работать!
+      .leadInfo__item
+        .leadInfo__counter 03
+        .leadInfo__header ЛЕГКО НАЙТИ
+        .leadInfo__content
+          p В офис компании удобно приехать.
+          p: b г. Пенза, Проспект Строителей, 1В  рядом с ТРК “Колаж”.
+          p Наши специалисты встретят в офисе или организуют поездку на строительные объекты.
+    .leadInfo__gallery
+      .gallery
+        .gallery__slider
+          .gallery__items
+            .gallery__item: img.swiper-lazy(data-src='images/1_15.jpg')
+            .gallery__item: img.swiper-lazy(data-src='images/1_17.jpg')
+            .gallery__item: img.swiper-lazy(data-src='images/1_18.jpg')
+        .gallery__nav
+          button.navBtn.navBtn--prev: +svg('left-arrow')
+          button.navBtn.navBtn--next: +svg('left-arrow')

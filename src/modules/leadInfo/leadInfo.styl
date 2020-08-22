@@ -1,0 +1,94 @@
+.leadInfo
+  margin: 107px 0 39px
+  position: relative;
+  overflow: hidden;
+  +media('lg')
+    margin-bottom: 0
+  +media('md')
+    margin-top: 40px
+
+  &:before
+    content: ''
+    position: absolute;
+    background: url(../../images/wood-bg-black.png) no-repeat
+    width: 367px
+    height: 370px
+    top: -341px;
+    left: 50%;
+    margin-left: 410px;
+    pointer-events none
+    +media('md')
+      left: auto;
+      margin-left: auto;
+      right: -249px;
+      top: -196px;
+
+  &__title
+    margin-bottom: 69px
+    +media('md')
+      font-size: 32px
+      line-height: 1.25
+      margin-bottom: 36px
+
+  &__items
+    display: flex;
+    flex-wrap wrap
+    margin: 0 -15px 0
+    +media('lg')
+      margin: 0
+
+  &__item
+    padding-left: 15px
+    width: 50%
+    padding-right: 85px
+    margin-bottom: 62px
+    +media('lg')
+      padding: 0
+      width: 100%
+      margin-bottom: 23px
+    +media('md')
+      position: relative;
+      padding-left: 69px
+      padding-right: 0
+
+    &--placeholder
+      +media('lg')
+        display: none;
+
+  &__counter
+    background: #8a6552
+    font-size: 21px
+    font-weight: bold;
+    color: $white
+    text-align: center;
+    width: 50px
+    height: 50px
+    line-height: 50px
+    margin-bottom: 20px
+    +media('md')
+      position: absolute;
+      left: 0
+      top: 6px
+
+  &__header
+    font-size: 21px
+    font-weight: bold;
+    margin-bottom: 13px
+    +media('md')
+      font-size: 16px
+      line-height: 1.5
+      margin-bottom: 10px
+
+  &__gallery
+    position: absolute;
+    top: 13px
+    margin-left: 15px
+    left: 50%
+    width: 570px
+    +media('lg')
+      position: static;
+      margin: 0 auto
+    +media('md')
+      width: auto;
+      margin-left: -20px
+      margin-right: -20px

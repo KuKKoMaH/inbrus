@@ -1,0 +1,45 @@
+.leadHead
+  .c
+    .leadHead__image(style='background-image: url(modules/leadHead/img/leadHead-bg.jpg)')
+    .leadHead__image.leadHead__image--sm(style='background-image: url(modules/leadHead/img/leadHead-bg-sm.jpg)')
+    .leadHead__content
+      .leadHead__main
+        h1.leadHead__title
+          .leadHead__highlight #[span Посетите единственный в Пензе]
+          | демонстрационный дом-офис из клееного бруса!
+        p Вы сможете увидеть: образцы бруса, детали конструкций деревянных домов, и вам будет сразу понятно, почему клиенты выбирают наш клееный брус и нас, как строителя.
+
+      .leadHead__aside
+        .modal__content
+          .modal__title.h4 Договоритесь с менеджером о встрече
+          .modal__text
+            p и получите скидку на эскиз проекта 70% и чек-лист «8 признаков качественного бруса»
+          .modal__form
+            .input
+              label.input__label ВАШЕ ИМЯ
+              span: input.input__input
+            .input
+              label.input__label ВАШ ТЕЛЕФОН
+              span: input.input__input
+
+            .modal__button
+              button.btn(data-micromodal-close) ПЕРЕЗВОНИТЕ МНЕ
+
+          .modal__note Отправляя форму вы даете согласие на #[span обработку персональных данных] и согласны с #[span(data-micromodal-trigger="politic-modal") политикой конфидициальности]
+
+      .leadHead__bullets
+        .leadHead__bullet
+          .leadHead__icon: +svg('saw')
+          .leadHead__header #[span 100] %
+          .leadHead__text наше производство от бруса до готового дома
+        .leadHead__bullet
+          .leadHead__icon: +svg('house')
+          .leadHead__header #[span 98] м #[sup 2]
+          .leadHead__text площадь дома-офиса
+        .leadHead__bullet
+          .leadHead__icon: +svg('wood')
+          .leadHead__header каждый #[span 2]
+          .leadHead__text посетитель отмечает неповторимый и теплый аромат дерева
+
+
+
